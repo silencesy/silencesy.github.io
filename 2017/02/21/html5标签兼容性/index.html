@@ -3,29 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Silence</title>
+  <title>Silence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="##HTML5的兼容性
+
+因为在IE8及一下的IE版本是不兼容HTML5的新元素的，所以我们要是用HTML5开发的话，第一个要解决的就是兼容性的问题。HTML5的兼容性
+
+因为HTML5的新元素就是一些新的标签，IE只是不认识这些标签而已，那我们解决的问题就是让IE8一下版本的浏览器认识这些标签，或者说知道他就是一个标签，那么我们就解决了兼容性问题。比如：header 这个标签在IE8及一下的版本">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/02/18/hello-world/index.html">
+<meta property="og:title" content="Silence">
+<meta property="og:url" content="http://yoursite.com/2017/02/21/html5标签兼容性/index.html">
 <meta property="og:site_name" content="Silence">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-02-18T05:57:42.258Z">
+<meta property="og:description" content="##HTML5的兼容性
+
+因为在IE8及一下的IE版本是不兼容HTML5的新元素的，所以我们要是用HTML5开发的话，第一个要解决的就是兼容性的问题。HTML5的兼容性
+
+因为HTML5的新元素就是一些新的标签，IE只是不认识这些标签而已，那我们解决的问题就是让IE8一下版本的浏览器认识这些标签，或者说知道他就是一个标签，那么我们就解决了兼容性问题。比如：header 这个标签在IE8及一下的版本">
+<meta property="og:updated_time" content="2017-02-21T14:32:13.003Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Silence">
+<meta name="twitter:description" content="##HTML5的兼容性
+
+因为在IE8及一下的IE版本是不兼容HTML5的新元素的，所以我们要是用HTML5开发的话，第一个要解决的就是兼容性的问题。HTML5的兼容性
+
+因为HTML5的新元素就是一些新的标签，IE只是不认识这些标签而已，那我们解决的问题就是让IE8一下版本的浏览器认识这些标签，或者说知道他就是一个标签，那么我们就解决了兼容性问题。比如：header 这个标签在IE8及一下的版本">
   
     <link rel="alternative" href="/atom.xml" title="Silence" type="application/atom+xml">
   
   
     <link rel="icon" href="/img/favicon.png">
   
-  
-      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
   
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -41,7 +48,7 @@ Quick">
       var yiliaConfig = {
           rootUrl: '/',
           fancybox: true,
-          animate: true,
+          animate: false,
           isHome: false,
           isPost: true,
           isArchive: false,
@@ -59,7 +66,7 @@ Quick">
     <header id="header" class="inner">
         <a href="/" class="profilepic">
             
-            <img lazy-src="/img/head.jpg" class="js-avatar">
+            <img src="/img/head.jpg" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
             
         </a>
 
@@ -69,6 +76,39 @@ Quick">
 
         
         
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
         
 
         <div id="switch-area" class="switch-area">
@@ -101,20 +141,18 @@ Quick">
                 </section>
                 
                 
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
-                    
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
                     </div>
                 </section>
+                
+                
                 
 
                 
                 
-                <section class="switch-part switch-part4">
+                <section class="switch-part switch-part3">
                 
                     <div id="js-aboutme">爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
                 </section>
@@ -134,7 +172,7 @@ Quick">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
                 
-                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                    <img src="/img/head.jpg" class="js-avatar" style="width: 100%; height: 100%; opacity: 1;">
                 
             </a>
             <hgroup>
@@ -169,11 +207,11 @@ Quick">
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-html5标签兼容性" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/02/18/hello-world/" class="article-date">
-      <time datetime="2017-02-18T05:57:42.257Z" itemprop="datePublished">2017-02-18</time>
+      <a href="/2017/02/21/html5标签兼容性/" class="article-date">
+      <time datetime="2017-02-21T14:33:29.812Z" itemprop="datePublished">2017-02-21</time>
 </a>
     </div>
   
@@ -182,36 +220,42 @@ Quick">
       <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hello World
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-        <div class="clearfix"></div>
-      </div>
-      
-    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>##HTML5的兼容性</p>
+<ul>
+<li><p>因为在IE8及一下的IE版本是不兼容HTML5的新元素的，所以我们要是用HTML5开发的话，第一个要解决的就是兼容性的问题。<br>HTML5的兼容性</p>
+</li>
+<li><p>因为HTML5的新元素就是一些新的标签，IE只是不认识这些标签而已，那我们解决的问题就是让IE8一下版本的浏览器认识这些标签，或者说知道他就是一个标签，那么我们就解决了兼容性问题。<br>比如：header 这个标签在IE8及一下的版本的浏览器中是不认识的，但是我们却可以通过一小段JS代码来创建标签，通过JS来创建的标签浏览器是可以识别的，我们就可以利用这个点来解决兼容性问题。<br>这里就需要用到一个方法，document.createElement();</p>
+</li>
+</ul>
+<ul>
+<li><code>var oHeader = document.createElement(&quot;header&quot;);</code>//-&gt; 动态创建一个标签‘header’<br>document.body.appendChild(oHeader)//-&gt; 把header标签动态添加到body中<br>这样添加以后我们就可以在IE8下使用header标签了。但是，我们不确定我们的每一次开发中到底使用多少个header标签，也不确定具体要什么时候使用，如果说我们每一次使用的时候都写一小段JS代码来动态创建和动态添加的话，那就会很耗性能，所以我们只需要在最开始告诉浏览器一声，我创建了一个header标签就可以，至于什么时候用浏览器你就别管了，反正只要出现了这个标签你知道他是什么，会渲染他就可以了，我们就可以这样写</li>
+</ul>
+<ul>
+<li><p><code>document.createElement(&quot;header&quot;);</code><br>这样就可以了，以后你再使用header标签的时候，浏览器就会知道，他是一个标签，我就按照标签的标准来渲染他就行了。但是第二个问题出现了，那就是我们也不知道我会在这次开发中都使用到哪些个HTML5的标签，那么我们就把每一个HTML5标签都声明一遍就可以了。</p>
+</li>
+<li><p>这里就不用我们自己来写了，只需要引入一个JS文件就可以了。<br>就是 “html5shiv.min” 这个文件，里面已经帮我们把所有的都写好了，就不用我们每回自己写了。<br>这个时候出现了第三个问题，那就是我们引入了这个JS文件以后，那么不管这个浏览器是不是兼容HTML5标签，我们都声明了一遍，也就是说我们这一段JS代码都运行了，当然，这样做是没有问题的，可是这样对于已经可以兼容HTML5的浏览器来说就是浪费了，虽然这个文件很小，但是也会浪费一定的性能，作为一个开发人员来说，没一个KB的性能都是能省就省，尽量不出现一个多余的KB。所以，我们就只要让这个JS文件在IE8及以下版本的浏览器中运行就行了，这个时候我们就需要一种方法：</p>
+</li>
+</ul>
+<!--[if lte IE 8]>
+这个注释是只属于IE的，也就是说只有IE浏览器才认识    
+<![endif]-->
+<p>这个注释的意思是，当浏览器是IE8及以下的版本的时候，才执行中间的代码。</p>
+<ul>
+<li><!--[if lte IE 8]>
+`<script>alert(123)</script>`
+<![endif]-->
+只有在IE8及一下版本的浏览器中，才会执行这个“alert(123)”这个命令，而其他的浏览器不会执行这一段代码。</li>
+</ul>
+<p>所以我们可以用这个方法来引入刚才那段JS代码</p>
+<ul>
+<li><!--[if lte IE 8]>
+`<script src="./html5shiv.min"></script>`
+<![endif]-->
+这样就可以做到只在不兼容HTML5的浏览器中进行声明，而兼容的浏览器则直接跳过，这样做即解决了兼容性问题，也进行了性能优化。</li>
+</ul>
 
       
     </div>
@@ -220,13 +264,13 @@ Quick">
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/02/18/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2017/02/21/html5标签兼容性/"></a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Silence 的个人博客">Silence</a></p>
-        <p><span>发布时间:</span>2017年02月18日 - 13时57分</p>
-        <p><span>最后更新:</span>2017年02月18日 - 13时57分</p>
+        <p><span>发布时间:</span>2017年02月21日 - 22时33分</p>
+        <p><span>最后更新:</span>2017年02月21日 - 22时32分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/02/18/hello-world/" title="Hello World">http://yoursite.com/2017/02/18/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/02/18/hello-world/　　作者: Silence" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/02/21/html5标签兼容性/" title="">http://yoursite.com/2017/02/21/html5标签兼容性/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/02/21/html5标签兼容性/　　作者: Silence" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -239,15 +283,11 @@ Quick">
 
 <nav id="article-nav">
   
-    <a href="/2017/02/18/frist/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          git总结
-        
-      </div>
-    </a>
   
+    <a href="/2017/02/21/angular路由使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">angular路由使用</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -256,7 +296,7 @@ Quick">
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -304,7 +344,7 @@ Quick">
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/02/18/hello-world/" data-title="Hello World" data-url="http://yoursite.com/2017/02/18/hello-world/"></div>
+    <div class="ds-thread" data-thread-key="2017/02/21/html5标签兼容性/" data-title="" data-url="http://yoursite.com/2017/02/21/html5标签兼容性/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -327,16 +367,16 @@ Quick">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/02/18/frist/" title="上一篇: git总结">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/02/21/angular路由使用/" title="下一篇: angular路由使用">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/18/第二/">git续篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/18/frist/">git总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/18/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/21/html5标签兼容性/">html5标签兼容性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/21/angular路由使用/">angular路由使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/18/git续编/">git续篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/18/git初识/">git总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/18/hello-world/">Hello World</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
