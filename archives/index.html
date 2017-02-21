@@ -21,8 +21,6 @@
     <link rel="icon" href="/img/favicon.png">
   
   
-      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
-  
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -37,7 +35,7 @@
       var yiliaConfig = {
           rootUrl: '/',
           fancybox: true,
-          animate: true,
+          animate: false,
           isHome: false,
           isPost: false,
           isArchive: true,
@@ -55,7 +53,7 @@
     <header id="header" class="inner">
         <a href="/" class="profilepic">
             
-            <img lazy-src="/img/head.jpg" class="js-avatar">
+            <img src="/img/head.jpg" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
             
         </a>
 
@@ -65,6 +63,39 @@
 
         
         
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
         
 
         <div id="switch-area" class="switch-area">
@@ -97,20 +128,18 @@
                 </section>
                 
                 
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
-                    
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
                     </div>
                 </section>
+                
+                
                 
 
                 
                 
-                <section class="switch-part switch-part4">
+                <section class="switch-part switch-part3">
                 
                     <div id="js-aboutme">爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
                 </section>
@@ -130,7 +159,7 @@
         <header id="header" class="inner">
             <a href="/" class="profilepic">
                 
-                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                    <img src="/img/head.jpg" class="js-avatar" style="width: 100%; height: 100%; opacity: 1;">
                 
             </a>
             <hgroup>
@@ -182,14 +211,14 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
           <div class="article-meta">
-              <a href="/2017/02/18/第二/" class="archive-article-date">
-      <time datetime="2017-02-18T08:46:33.030Z" itemprop="datePublished">02-18</time>
+              <a href="/2017/02/21/angular路由使用/" class="archive-article-date">
+      <time datetime="2017-02-21T07:52:58.691Z" itemprop="datePublished">02-21</time>
 </a>
         </div>
          
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/18/第二/">git续篇</a>
+      <a class="archive-article-title" href="/2017/02/21/angular路由使用/">angular路由使用</a>
     </h1>
   
 
@@ -209,14 +238,41 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
           <div class="article-meta">
-              <a href="/2017/02/18/frist/" class="archive-article-date">
+              <a href="/2017/02/18/git续编/" class="archive-article-date">
+      <time datetime="2017-02-18T08:46:33.030Z" itemprop="datePublished">02-18</time>
+</a>
+        </div>
+         
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/02/18/git续编/">git续篇</a>
+    </h1>
+  
+
+        <div class="article-info info-on-archive">
+          
+
+          
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2017/02/18/git初识/" class="archive-article-date">
       <time datetime="2017-02-18T06:09:26.690Z" itemprop="datePublished">02-18</time>
 </a>
         </div>
          
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/18/frist/">git总结</a>
+      <a class="archive-article-title" href="/2017/02/18/git初识/">git总结</a>
     </h1>
   
 
