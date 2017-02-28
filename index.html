@@ -199,6 +199,127 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-less使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/28/less使用/" class="article-date">
+      <time datetime="2017-02-28T13:27:16.877Z" itemprop="datePublished">2017-02-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>##less语法</p>
+<p>####一、注释的区别<br>    /**/会编译在css文件中<br>    //不会编译在css中</p>
+<p>####二、声明变量及使用<br>    @maincolor:#92322;<br>    使用变量 body{ color:@maincolor;}</p>
+<p>####三、mixin混入<br>    .redFont{<br>        color:red;<br>    }<br>    .redBorder {<br>        border:1px solid red;<br>    }<br>    //红色文字和边框 通过class混合<br>    .redFontBorder-class {<br>        .redFont();<br>        .redBOrder();<br>    }<br>    //方法<br>    .redFont-func(){<br>        color:red;<br>    }<br>    .redBorder-func(){<br>        border:1px solid red;<br>    }</p>
+<pre><code>//红色文字和边框 通过func混合
+.redFontBorder-func{
+    .redFont-func();
+    .redBorder-func();
+}
+</code></pre><p>####四、嵌套</p>
+<pre><code>#header{
+    width:100px;
+    &gt;div{
+      width:100px;
+        p{
+            width:100px;
+            &amp;:hover {
+                width:100px;
+            }
+        }
+        &amp;+div {
+            width:100px;
+        }
+        //&amp;~div {
+            width:100px;
+        }
+    }
+}
+直接写在里面就是 后代选择器
+&amp;：hover
+&gt; 子代选择器
+&amp;+ 加号选择器
+&amp;~ 波浪选择器
+</code></pre><p>####五、导入@import<br>    注意这里引入less文件的时候不用加后缀名<br>    如: @import “文件名”；<br>    可以使用引入文件的变量和函数以及类名。</p>
+<p>####六、运算<br>    颜色运算<br>    @red:red*0.5;<br>    内置函数<br>    @gary:darken(#333,10%);</p>
+<p>####七、less的使用<br>    引用less文件 注意在引用的时候文件类型写type/less<br>    引用less.js文件(在浏览器上使用less，我们需要添加一个js插件 less.js 解析less文件动态加载<br>    注意：他是一部加载less文件　然后解析<br>    一定要求是　使用http形式访问　否则无法加载less文件<br>    不建议使用less.js这种形式来用less</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-字符串方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/28/字符串方法/" class="article-date">
+      <time datetime="2017-02-28T13:27:16.821Z" itemprop="datePublished">2017-02-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>1，获取字符串长度Length属性<br>string.length<br>2，连接字符串：concat<br>s1.concat(1,2,3);<br>3,获取索引值：indexOf()<br>string.indexof(“v”)<br>string.indexof(“v”,fromIndex)<br>如果没有就返回-1<br>表示从索引位置fromIndex开始查找，如果fromIndex省略，则表示默认从起始索引0开始查找<br>若fromIndex为负，则从索引0开始查找.<br>4,根据索引值获取单个字符：charAt()<br>5,substr(fromIndex,length)<br>获取部分字符串从起始索引fromIndex开始截取长度length的字符串<br>6,substring(startIndex,endIndex)<br>获取部分字符串<br>截取 起始索引startIndex  到  结束索引endIndex的子字符串，<br>结果包含startIndex处的字符，不包含endIndex处的字符。<br>7,slice(startIndex,endIndex)<br>获取部分字符串<br>截取 起始索引startIndex  到  结束索引endIndex的子字符串，<br>结果包含startIndex处的字符，不包含endIndex处的字符。<br>8,split()分割<br>按给定字符串分割，返回分割后的多个字符串组成的字符串数组。<br>9,Join()合并<br>使用您选择的分隔符将一个数组合并为一个字符串<br>10,toLowerCase()转小写<br>toUpperCase()转大写<br>字符串大小写转换<br>使用您选择的分隔符将一个数组合并为一个字符串</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-签看css3" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
