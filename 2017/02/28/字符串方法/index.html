@@ -22,6 +22,8 @@
     <link rel="icon" href="/img/favicon.png">
   
   
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -36,7 +38,7 @@
       var yiliaConfig = {
           rootUrl: '/',
           fancybox: true,
-          animate: false,
+          animate: true,
           isHome: false,
           isPost: true,
           isArchive: false,
@@ -54,7 +56,7 @@
     <header id="header" class="inner">
         <a href="/" class="profilepic">
             
-            <img src="/img/head.jpg" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+            <img lazy-src="/img/head.jpg" class="js-avatar">
             
         </a>
 
@@ -160,7 +162,7 @@
         <header id="header" class="inner">
             <a href="/" class="profilepic">
                 
-                    <img src="/img/head.jpg" class="js-avatar" style="width: 100%; height: 100%; opacity: 1;">
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
                 
             </a>
             <hgroup>
