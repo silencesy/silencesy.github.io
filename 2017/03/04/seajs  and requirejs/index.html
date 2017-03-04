@@ -3,30 +3,63 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Silence</title>
+  <title>seajs和requirejs | Silence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##HTML5的兼容性
+  <meta name="description" content="##为什么要使用模块化
 
-因为在IE8及一下的IE版本是不兼容HTML5的新元素的，所以我们要是用HTML5开发的话，第一个要解决的就是兼容性的问题。HTML5的兼容性
+全局变量、全局函数，容易造成变量名冲突
+页面引入了一堆的js文件，存在先后顺序的问题
+代码由于组织混乱很容易出错
+出错了很难调试
+后期难以维护
 
-因为HTML5的新元素就是一些新的标签，IE只是不认识这些标签而已，那我们解决的问题就是让IE8一下版本的浏览器认识这些标签，或者说知道他就是一个标签，那么我们就解决了兼容性问题。比如：header 这个标签在IE8及一下的版本">
+
+模块化的好处
+提升开发效率
+便于后期维护
+
+
+
+##模块化理解模块化是一种组织代码的方式，当我们的项目越来越复杂的时候，如果把很多功能业务逻辑写在一起，就会造成开发起来十分的繁琐(因为经常会遇到变量命名冲突、文件依赖过于混乱的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Silence">
-<meta property="og:url" content="http://yoursite.com/2017/02/21/html5标签兼容性/index.html">
+<meta property="og:title" content="seajs和requirejs">
+<meta property="og:url" content="http://yoursite.com/2017/03/04/seajs  and requirejs/index.html">
 <meta property="og:site_name" content="Silence">
-<meta property="og:description" content="##HTML5的兼容性
+<meta property="og:description" content="##为什么要使用模块化
 
-因为在IE8及一下的IE版本是不兼容HTML5的新元素的，所以我们要是用HTML5开发的话，第一个要解决的就是兼容性的问题。HTML5的兼容性
+全局变量、全局函数，容易造成变量名冲突
+页面引入了一堆的js文件，存在先后顺序的问题
+代码由于组织混乱很容易出错
+出错了很难调试
+后期难以维护
 
-因为HTML5的新元素就是一些新的标签，IE只是不认识这些标签而已，那我们解决的问题就是让IE8一下版本的浏览器认识这些标签，或者说知道他就是一个标签，那么我们就解决了兼容性问题。比如：header 这个标签在IE8及一下的版本">
-<meta property="og:updated_time" content="2017-02-21T14:32:13.003Z">
+
+模块化的好处
+提升开发效率
+便于后期维护
+
+
+
+##模块化理解模块化是一种组织代码的方式，当我们的项目越来越复杂的时候，如果把很多功能业务逻辑写在一起，就会造成开发起来十分的繁琐(因为经常会遇到变量命名冲突、文件依赖过于混乱的">
+<meta property="og:updated_time" content="2017-03-04T04:50:07.592Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Silence">
-<meta name="twitter:description" content="##HTML5的兼容性
+<meta name="twitter:title" content="seajs和requirejs">
+<meta name="twitter:description" content="##为什么要使用模块化
 
-因为在IE8及一下的IE版本是不兼容HTML5的新元素的，所以我们要是用HTML5开发的话，第一个要解决的就是兼容性的问题。HTML5的兼容性
+全局变量、全局函数，容易造成变量名冲突
+页面引入了一堆的js文件，存在先后顺序的问题
+代码由于组织混乱很容易出错
+出错了很难调试
+后期难以维护
 
-因为HTML5的新元素就是一些新的标签，IE只是不认识这些标签而已，那我们解决的问题就是让IE8一下版本的浏览器认识这些标签，或者说知道他就是一个标签，那么我们就解决了兼容性问题。比如：header 这个标签在IE8及一下的版本">
+
+模块化的好处
+提升开发效率
+便于后期维护
+
+
+
+##模块化理解模块化是一种组织代码的方式，当我们的项目越来越复杂的时候，如果把很多功能业务逻辑写在一起，就会造成开发起来十分的繁琐(因为经常会遇到变量命名冲突、文件依赖过于混乱的">
   
     <link rel="alternative" href="/atom.xml" title="Silence" type="application/atom+xml">
   
@@ -240,11 +273,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-html5标签兼容性" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-seajs  and requirejs" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/02/21/html5标签兼容性/" class="article-date">
-      <time datetime="2017-02-21T14:33:29.812Z" itemprop="datePublished">2017-02-21</time>
+      <a href="/2017/03/04/seajs  and requirejs/" class="article-date">
+      <time datetime="2017-03-04T04:49:07.655Z" itemprop="datePublished">2017-03-04</time>
 </a>
     </div>
   
@@ -253,42 +286,99 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      seajs和requirejs
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>##HTML5的兼容性</p>
-<ul>
-<li><p>因为在IE8及一下的IE版本是不兼容HTML5的新元素的，所以我们要是用HTML5开发的话，第一个要解决的就是兼容性的问题。<br>HTML5的兼容性</p>
+        <p>##为什么要使用模块化</p>
+<ol>
+<li>全局变量、全局函数，容易造成变量名冲突</li>
+<li>页面引入了一堆的js文件，存在先后顺序的问题<ul>
+<li>代码由于组织混乱很容易出错</li>
+<li>出错了很难调试</li>
+<li>后期难以维护</li>
+</ul>
 </li>
-<li><p>因为HTML5的新元素就是一些新的标签，IE只是不认识这些标签而已，那我们解决的问题就是让IE8一下版本的浏览器认识这些标签，或者说知道他就是一个标签，那么我们就解决了兼容性问题。<br>比如：header 这个标签在IE8及一下的版本的浏览器中是不认识的，但是我们却可以通过一小段JS代码来创建标签，通过JS来创建的标签浏览器是可以识别的，我们就可以利用这个点来解决兼容性问题。<br>这里就需要用到一个方法，document.createElement();</p>
+<li>模块化的好处<ul>
+<li>提升开发效率</li>
+<li>便于后期维护</li>
+</ul>
 </li>
-</ul>
+</ol>
+<p>##模块化理解<br>模块化是一种组织代码的方式，当我们的项目越来越复杂的时候，如果把很多功能业务逻辑写在一起，就会造成开发起来十分的繁琐(因为经常会遇到变量命名冲突、文件依赖过于混乱的问题)，同时维护起来也十分的麻烦，这时候，我们可以考虑把代码按照功能等方面把整个项目划分成一个一个的模块，这样，当我们开发的时候，我们每次只需要关注这一小功能点是如何实现的，从而简化了开发的难度，这样可以提高我们开发的效率，同时，后期维护起来也会变得更加的简单。</p>
+<p>####cmd规范特性</p>
 <ul>
-<li><code>var oHeader = document.createElement(&quot;header&quot;);</code>//-&gt; 动态创建一个标签‘header’<br>document.body.appendChild(oHeader)//-&gt; 把header标签动态添加到body中<br>这样添加以后我们就可以在IE8下使用header标签了。但是，我们不确定我们的每一次开发中到底使用多少个header标签，也不确定具体要什么时候使用，如果说我们每一次使用的时候都写一小段JS代码来动态创建和动态添加的话，那就会很耗性能，所以我们只需要在最开始告诉浏览器一声，我创建了一个header标签就可以，至于什么时候用浏览器你就别管了，反正只要出现了这个标签你知道他是什么，会渲染他就可以了，我们就可以这样写</li>
+<li>一个模块就是一个单独的文件</li>
+<li>由于每个模块都是属于define关键字函数的回调函数被调用，每个模块都是一个单独的作用域</li>
+<li>预加载、懒执行（预加载就是预先把所有的模块全部加载完，懒执行就是需要执行哪块才执行哪块）</li>
 </ul>
+<p>####关键字</p>
 <ul>
-<li><p><code>document.createElement(&quot;header&quot;);</code><br>这样就可以了，以后你再使用header标签的时候，浏览器就会知道，他是一个标签，我就按照标签的标准来渲染他就行了。但是第二个问题出现了，那就是我们也不知道我会在这次开发中都使用到哪些个HTML5的标签，那么我们就把每一个HTML5标签都声明一遍就可以了。</p>
+<li>define    定义一个模块</li>
+<li>require    加载一个模块</li>
+<li>exports    暴露一个模块</li>
+<li>module    模块</li>
+</ul>
+<p>####注意点</p>
+<ul>
+<li>define(function(require,exports,module){});这里面的require,exports,module三个参数的名字是固定写法，不能简写，顺序不能错了 记忆方法：rem</li>
+<li>如果define里的参数想省略，只能从后面开始省略，只要写了后面的，前面的必须要写上 –&gt; 推荐写全，不要省</li>
+<li>如果一个模块既不需要公开成员变量，也不需要依赖第三方模块，那么可以全部省略</li>
+<li>seajs.use(“入口模块”)可以加回调函数，形式如：seajs.use(“入口模块”,callback);</li>
+</ul>
+<p>####路径问题</p>
+<ol>
+<li><p>在sea.js当中，js/main和./js/main的含义不是一样的</p>
+<ul>
+<li>js/main代表的是在sea.js所在的文件为基准去找，所以找到的是 –&gt; SEAJS所在的父级文件夹/js/main.js 这样的话会找不到的(相对seajs包的路径)</li>
+<li>./js/main代表的是以当前html文件去找js文件夹下面的main.js</li>
+<li>require(“xxx”) –&gt; 其实这里的xxx叫模块标识，不是路径</li>
+</ul>
 </li>
-<li><p>这里就不用我们自己来写了，只需要引入一个JS文件就可以了。<br>就是 “html5shiv.min” 这个文件，里面已经帮我们把所有的都写好了，就不用我们每回自己写了。<br>这个时候出现了第三个问题，那就是我们引入了这个JS文件以后，那么不管这个浏览器是不是兼容HTML5标签，我们都声明了一遍，也就是说我们这一段JS代码都运行了，当然，这样做是没有问题的，可是这样对于已经可以兼容HTML5的浏览器来说就是浪费了，虽然这个文件很小，但是也会浪费一定的性能，作为一个开发人员来说，没一个KB的性能都是能省就省，尽量不出现一个多余的KB。所以，我们就只要让这个JS文件在IE8及以下版本的浏览器中运行就行了，这个时候我们就需要一种方法：</p>
+<li><p>config的作用就是为了简化调用模块</p>
+<ul>
+<li>base 设置路径</li>
+<li>alias 设置模块的别名，简化调用</li>
+</ul>
 </li>
-</ul>
-<!--[if lte IE 8]>
-这个注释是只属于IE的，也就是说只有IE浏览器才认识    
-<![endif]-->
-<p>这个注释的意思是，当浏览器是IE8及以下的版本的时候，才执行中间的代码。</p>
-<ul>
-<li><!--[if lte IE 8]>
-`<script>alert(123)</script>`
-<![endif]-->
-只有在IE8及一下版本的浏览器中，才会执行这个“alert(123)”这个命令，而其他的浏览器不会执行这一段代码。</li>
-</ul>
-<p>所以我们可以用这个方法来引入刚才那段JS代码</p>
-<ul>
-<li><!--[if lte IE 8]>
-`<script src="./html5shiv.min"></script>`
-<![endif]-->
-这样就可以做到只在不兼容HTML5的浏览器中进行声明，而兼容的浏览器则直接跳过，这样做即解决了兼容性问题，也进行了性能优化。</li>
-</ul>
+</ol>
+<p>##seajs使用</p>
+<p>####1. 引包<br>    <script src="js/sea.js"></script></p>
+<p>####2. 入口模块<br>    //为了简洁，路径最好不加.js<br>    //加载完成后触发回调函数<br>    //简化调用模块<br>    seajs.config({<br>    //base 设置路径<br>    //alias 设置模块的别名，简化调用<br>        base:”./js”<br>        alias:{<br>            m:”main”<br>        }<br>    })<br>    seajs.use(“./js/main”,function(){<br>      console.log(‘代码执行成功’);<br>    });</p>
+<p>####3. 主模块<br>    // 名字写全 并且顺序和单词都要写对（便于记住rem）<br>    define(function (require, exports, module) {<br>    // require 方法得到的就是指定的模块中向外暴露的接口对象     module.exports<br>    // var fooModule = require(‘./foo’)<br>    // console.log(fooModule.foo)<br>    var foo = require(‘./foo’)<br>        console.log(foo)<br>    });</p>
+<p>####4. 第三方模块<br>    define(function (require, exports, module) {<br>    // 每个文件模块都是一个模块作用域，外部是无法直接拿到的里面的东西的<br>    var foo = ‘bar’;<br>    // 默认情况下 module.exports 就是一个空对象<br>    // module.exports.foo = foo</p>
+<pre><code>module.exports = &apos;bar&apos;;
+});
+</code></pre><p>####sea.js把非cmd模块转换成cmd模块<br>        // 判断的左右就是防止jquery不作为cmd模块使用的时候也可以用<br>        if (typeof define === ‘function’ &amp;&amp; define.cmd) {<br>            define(function(require,exports,module){<br>                module.exports = jQuery;<br>            });<br>        }</p>
+<p>##require.js</p>
+<p>####引包<br>    //data-main引入主模块包<br>    <script src="js/lib/require.js" data-main="js/app/main"></script></p>
+<pre><code>//如果想用jQuery,则必须配置如下：
+require.config({
+  baseUrl:&apos;./js/app/&apos;,//这里设置的是main的路径
+  paths:{
+    &quot;jquery&quot;:&quot;../lib/jquery&quot;
+  }
+});
+</code></pre><p>####main<br>    //类似angular<br>    //[‘./cal’]映入第三方模块<br>    requirejs([‘./cal’],function(calculator){</p>
+<pre><code>});
+</code></pre><p>####第三方模块<br>    define(function(){<br>        //用return 提供接口暴露数据<br>        return<br>    });</p>
 
       
     </div>
@@ -297,13 +387,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/02/21/html5标签兼容性/"></a></p>
+        <p><span>本文标题:</span><a href="/2017/03/04/seajs  and requirejs/">seajs和requirejs</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Silence 的个人博客">Silence</a></p>
-        <p><span>发布时间:</span>2017年02月21日 - 22时33分</p>
-        <p><span>最后更新:</span>2017年02月21日 - 22时32分</p>
+        <p><span>发布时间:</span>2017年03月04日 - 12时49分</p>
+        <p><span>最后更新:</span>2017年03月04日 - 12时50分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/02/21/html5标签兼容性/" title="">http://yoursite.com/2017/02/21/html5标签兼容性/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/02/21/html5标签兼容性/　　作者: Silence" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/04/seajs  and requirejs/" title="seajs和requirejs">http://yoursite.com/2017/03/04/seajs  and requirejs/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/04/seajs  and requirejs/　　作者: Silence" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -316,18 +406,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/02/21/html5表单/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/04/art-template的模板引擎/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          HTML5的表单
+          (no title)
         
       </div>
     </a>
   
   
-    <a href="/2017/02/21/angular路由使用/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">angular路由使用</div>
+    <a href="/2017/02/28/less使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -386,7 +476,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/02/21/html5标签兼容性/" data-title="" data-url="http://yoursite.com/2017/02/21/html5标签兼容性/"></div>
+    <div class="ds-thread" data-thread-key="2017/03/04/seajs  and requirejs/" data-title="seajs和requirejs" data-url="http://yoursite.com/2017/03/04/seajs  and requirejs/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -409,13 +499,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/02/21/html5表单/" title="上一篇: HTML5的表单">
+            <a href="/2017/03/04/art-template的模板引擎/" title="上一篇: ">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/02/21/angular路由使用/" title="下一篇: angular路由使用">
+            <a href="/2017/02/28/less使用/" title="下一篇: ">
                 <i class="fa fa-angle-right"></i>
             </a>
         

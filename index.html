@@ -80,6 +80,11 @@
                             <div class="ribbon"></div>
                         </div>
                         
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
                         
                         <div class="icon-wrap icon-me hide" data-idx="3">
                             <div class="user"></div>
@@ -94,6 +99,8 @@
                     <ul class="tips-inner">
                         <li>菜单</li>
                         <li>标签</li>
+                        
+                        <li>友情链接</li>
                         
                         
                         <li>关于我</li>
@@ -122,11 +129,19 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fl github" target="_blank" href="https://github.com/silencesy" title="github">github</a>
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
                             
                                 <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
                             
                                 <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
                             
                         </ul>
                     </nav>
@@ -141,12 +156,20 @@
                 
                 
                 
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
 
                 
                 
-                <section class="switch-part switch-part3">
+                <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
                 </section>
                 
             </div>
@@ -188,11 +211,19 @@
             <nav class="header-nav">
                 <div class="social">
                     
-                        <a class="github" target="_blank" href="https://github.com/silencesy" title="github">github</a>
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
                     
                         <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
                     
                         <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
                     
                 </div>
             </nav>
@@ -200,6 +231,259 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-art-template的模板引擎" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/04/art-template的模板引擎/" class="article-date">
+      <time datetime="2017-03-04T04:53:43.175Z" itemprop="datePublished">2017-03-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>#####jQuery遍历对象<br>    $.each(data,function(i,e){e.attr})；<br>    attr就是对象的属性。<br>    例如：$.each(data,function(i,e){<br>                                var date = new Date(Number(e.time+’000’)).toLocaleString();<br>                                infomation += ‘<ul><li>‘+ e.desc +’</li><li>‘+ date +’</li></ul>‘;<br>                            })</p>
+<p>####artTemplate方法一<br>    &lt;!DOCTYPE HTML&gt;<br>    <html><br>    <head><br>    <meta charset="UTF-8"><br>    <title>basic-demo</title><br>    <script src="../dist/template.js"></script><br>    </head></html></p>
+<pre><code>&lt;body&gt;
+&lt;div id=&quot;content&quot;&gt;&lt;/div&gt;
+&lt;script id=&quot;test&quot; type=&quot;text/html&quot;&gt;
+{{if isAdmin}}
+
+&lt;h1&gt;{{title}}&lt;/h1&gt;
+&lt;ul&gt;
+{{each list as value i}}
+    &lt;li&gt;索引 {{i + 1}} ：{{value}}&lt;/li&gt;
+{{/each}}
+&lt;/ul&gt;
+
+{{/if}}
+&lt;/script&gt;
+
+&lt;script&gt;
+var data = {
+    title: &apos;基本例子&apos;,
+isAdmin: true,
+list: [&apos;文艺&apos;, &apos;博客&apos;, &apos;摄影&apos;, &apos;电影&apos;, &apos;民谣&apos;, &apos;旅行&apos;, &apos;吉他&apos;]
+};
+var html = template(&apos;test&apos;, data);
+document.getElementById(&apos;content&apos;).innerHTML = html;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>####artTemplate方法二<br>    &lt;!DOCTYPE HTML&gt;<br>    <html><br>    <head><br>    <meta charset="UTF-8"><br>    <title>compile-demo</title><br>    <script src="../dist/template.js"></script><br>    </head></html></p>
+<pre><code>&lt;body&gt;
+&lt;h1&gt;在javascript中存放模板&lt;/h1&gt;
+&lt;div id=&quot;content&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var source = &apos;&lt;ul&gt;&apos;
++    &apos;{{each list as value i}}&apos;
++        &apos;&lt;li&gt;索引 {{i + 1}} ：{{value}}&lt;/li&gt;&apos;
++    &apos;{{/each}}&apos;
++ &apos;&lt;/ul&gt;&apos;;
+
+var render = template.compile(source);
+var data = {
+    list: [&apos;摄影&apos;, &apos;电影&apos;, &apos;民谣&apos;, &apos;旅行&apos;, &apos;吉他&apos;]
+};
+var html = render(data);
+
+document.getElementById(&apos;content&apos;).innerHTML = html;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>####artTemplate方法三-嵌入子模板</p>
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;include-demo&lt;/title&gt;
+&lt;script src=&quot;../dist/template.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div id=&quot;content&quot;&gt;&lt;/div&gt;
+&lt;script id=&quot;test&quot; type=&quot;text/html&quot;&gt;
+&lt;h1&gt;{{title}}&lt;/h1&gt;
+{{include 'list'}}
+&lt;/script&gt;
+&lt;script id=&quot;list&quot; type=&quot;text/html&quot;&gt;
+&lt;ul&gt;
+    {{each list as value i}}
+        &lt;li&gt;索引 {{i + 1}} ：{{value}}&lt;/li&gt;
+    {{/each}}
+&lt;/ul&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+var data = {
+    title: &apos;嵌入子模板&apos;,
+    list: [&apos;文艺&apos;, &apos;博客&apos;, &apos;摄影&apos;, &apos;电影&apos;, &apos;民谣&apos;, &apos;旅行&apos;, &apos;吉他&apos;]
+};
+var html = template(&apos;test&apos;, data);
+document.getElementById(&apos;content&apos;).innerHTML = html;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>####注意点</p>
+<pre><code>{{each list as value i}}
+list可以为对象或者是数组，value为值，i为索引。
+</code></pre><p>####把获取到的时间转换为现在的时间<br>    var data = new Date(Number(e.time+”000”)).toLocaleString();<br>    因为从后台传回来的是json格式的字符串，并且new Date().toLocaleString();里面必须为数字。所以用Number强制转换为数字。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-seajs  and requirejs" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/04/seajs  and requirejs/" class="article-date">
+      <time datetime="2017-03-04T04:49:07.655Z" itemprop="datePublished">2017-03-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/04/seajs  and requirejs/">seajs和requirejs</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>##为什么要使用模块化</p>
+<ol>
+<li>全局变量、全局函数，容易造成变量名冲突</li>
+<li>页面引入了一堆的js文件，存在先后顺序的问题<ul>
+<li>代码由于组织混乱很容易出错</li>
+<li>出错了很难调试</li>
+<li>后期难以维护</li>
+</ul>
+</li>
+<li>模块化的好处<ul>
+<li>提升开发效率</li>
+<li>便于后期维护</li>
+</ul>
+</li>
+</ol>
+<p>##模块化理解<br>模块化是一种组织代码的方式，当我们的项目越来越复杂的时候，如果把很多功能业务逻辑写在一起，就会造成开发起来十分的繁琐(因为经常会遇到变量命名冲突、文件依赖过于混乱的问题)，同时维护起来也十分的麻烦，这时候，我们可以考虑把代码按照功能等方面把整个项目划分成一个一个的模块，这样，当我们开发的时候，我们每次只需要关注这一小功能点是如何实现的，从而简化了开发的难度，这样可以提高我们开发的效率，同时，后期维护起来也会变得更加的简单。</p>
+<p>####cmd规范特性</p>
+<ul>
+<li>一个模块就是一个单独的文件</li>
+<li>由于每个模块都是属于define关键字函数的回调函数被调用，每个模块都是一个单独的作用域</li>
+<li>预加载、懒执行（预加载就是预先把所有的模块全部加载完，懒执行就是需要执行哪块才执行哪块）</li>
+</ul>
+<p>####关键字</p>
+<ul>
+<li>define    定义一个模块</li>
+<li>require    加载一个模块</li>
+<li>exports    暴露一个模块</li>
+<li>module    模块</li>
+</ul>
+<p>####注意点</p>
+<ul>
+<li>define(function(require,exports,module){});这里面的require,exports,module三个参数的名字是固定写法，不能简写，顺序不能错了 记忆方法：rem</li>
+<li>如果define里的参数想省略，只能从后面开始省略，只要写了后面的，前面的必须要写上 –&gt; 推荐写全，不要省</li>
+<li>如果一个模块既不需要公开成员变量，也不需要依赖第三方模块，那么可以全部省略</li>
+<li>seajs.use(“入口模块”)可以加回调函数，形式如：seajs.use(“入口模块”,callback);</li>
+</ul>
+<p>####路径问题</p>
+<ol>
+<li><p>在sea.js当中，js/main和./js/main的含义不是一样的</p>
+<ul>
+<li>js/main代表的是在sea.js所在的文件为基准去找，所以找到的是 –&gt; SEAJS所在的父级文件夹/js/main.js 这样的话会找不到的(相对seajs包的路径)</li>
+<li>./js/main代表的是以当前html文件去找js文件夹下面的main.js</li>
+<li>require(“xxx”) –&gt; 其实这里的xxx叫模块标识，不是路径</li>
+</ul>
+</li>
+<li><p>config的作用就是为了简化调用模块</p>
+<ul>
+<li>base 设置路径</li>
+<li>alias 设置模块的别名，简化调用</li>
+</ul>
+</li>
+</ol>
+<p>##seajs使用</p>
+<p>####1. 引包<br>    <script src="js/sea.js"></script></p>
+<p>####2. 入口模块<br>    //为了简洁，路径最好不加.js<br>    //加载完成后触发回调函数<br>    //简化调用模块<br>    seajs.config({<br>    //base 设置路径<br>    //alias 设置模块的别名，简化调用<br>        base:”./js”<br>        alias:{<br>            m:”main”<br>        }<br>    })<br>    seajs.use(“./js/main”,function(){<br>      console.log(‘代码执行成功’);<br>    });</p>
+<p>####3. 主模块<br>    // 名字写全 并且顺序和单词都要写对（便于记住rem）<br>    define(function (require, exports, module) {<br>    // require 方法得到的就是指定的模块中向外暴露的接口对象     module.exports<br>    // var fooModule = require(‘./foo’)<br>    // console.log(fooModule.foo)<br>    var foo = require(‘./foo’)<br>        console.log(foo)<br>    });</p>
+<p>####4. 第三方模块<br>    define(function (require, exports, module) {<br>    // 每个文件模块都是一个模块作用域，外部是无法直接拿到的里面的东西的<br>    var foo = ‘bar’;<br>    // 默认情况下 module.exports 就是一个空对象<br>    // module.exports.foo = foo</p>
+<pre><code>module.exports = &apos;bar&apos;;
+});
+</code></pre><p>####sea.js把非cmd模块转换成cmd模块<br>        // 判断的左右就是防止jquery不作为cmd模块使用的时候也可以用<br>        if (typeof define === ‘function’ &amp;&amp; define.cmd) {<br>            define(function(require,exports,module){<br>                module.exports = jQuery;<br>            });<br>        }</p>
+<p>##require.js</p>
+<p>####引包<br>    //data-main引入主模块包<br>    <script src="js/lib/require.js" data-main="js/app/main"></script></p>
+<pre><code>//如果想用jQuery,则必须配置如下：
+require.config({
+  baseUrl:&apos;./js/app/&apos;,//这里设置的是main的路径
+  paths:{
+    &quot;jquery&quot;:&quot;../lib/jquery&quot;
+  }
+});
+</code></pre><p>####main<br>    //类似angular<br>    //[‘./cal’]映入第三方模块<br>    requirejs([‘./cal’],function(calculator){</p>
+<pre><code>});
+</code></pre><p>####第三方模块<br>    define(function(){<br>        //用return 提供接口暴露数据<br>        return<br>    });</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-less使用" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -1087,68 +1371,10 @@ $scope.nowStu = $scope.students[$routeParams.name];
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2017/02/18/hello-world/" class="article-date">
-      <time datetime="2017-02-18T05:57:42.257Z" itemprop="datePublished">2017-02-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
@@ -1165,7 +1391,7 @@ $scope.nowStu = $scope.students[$routeParams.name];
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >游客到访数: 
+                        <span id="site-visit" >海贼到访数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
