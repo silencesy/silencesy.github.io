@@ -16,10 +16,13 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content="undefined">
+    <meta name="keywords" content="模板引擎">
 
 
-    <meta name="description" content="#####jQuery遍历对象    $.each(data,function(i,e){e.attr})；    attr就是对象的属性。    例如：$.each(data,function...">
+    <meta name="description" content="jQuery遍历对象$.each(data,function(i,e){e.attr})；
+attr就是对象的属性。
+例如：$.each(data,function(i,e){
+    var ...">
 
 
 
@@ -31,7 +34,7 @@
     <!--Title-->
 
 
-<title>Silence</title>
+<title>art-template模板引擎 | Silence</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
@@ -112,11 +115,7 @@
                             </li>
                         
                             <li role="presentation" class="text-center">
-                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
                             </li>
                         
                             <li role="presentation" class="text-center">
@@ -136,16 +135,16 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="">
+        <h1 id="art-template模板引擎">
             
-	            NO Title!
+	            art-template模板引擎
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            
+            <a class="category-link" href="/categories/前端/">前端</a>
         </span>
     
 
@@ -153,6 +152,8 @@
         <span class="fa-wrap">
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/模板引擎/">模板引擎</a>
                 
             </span>
         </span>
@@ -176,9 +177,21 @@
     </div>
     
     <div class="post-body post-content">
-        <p>#####jQuery遍历对象<br>    $.each(data,function(i,e){e.attr})；<br>    attr就是对象的属性。<br>    例如：$.each(data,function(i,e){<br>                                var date = new Date(Number(e.time+’000’)).toLocaleString();<br>                                infomation += ‘<ul><li>‘+ e.desc +’</li><li>‘+ date +’</li></ul>‘;<br>                            })</p>
-<p>####artTemplate方法一<br>    &lt;!DOCTYPE HTML&gt;<br>    <html><br>    <head><meta name="generator" content="Hexo 3.8.0"><br>    <meta charset="UTF-8"><br>    <title>basic-demo</title><br>    <script src="../dist/template.js"></script><br>    </head></html></p>
-<pre><code>&lt;body&gt;
+        <h4 id="jQuery遍历对象"><a href="#jQuery遍历对象" class="headerlink" title="jQuery遍历对象"></a>jQuery遍历对象</h4><pre><code>$.each(data,function(i,e){e.attr})；
+attr就是对象的属性。
+例如：$.each(data,function(i,e){
+    var date = new Date(Number(e.time+&apos;000&apos;)).toLocaleString();
+    infomation += &apos;&lt;ul&gt;&lt;li&gt;&apos;+ e.desc +&apos;&lt;/li&gt;&lt;li&gt;&apos;+ date +&apos;&lt;/li&gt;&lt;/ul&gt;&apos;;
+})
+</code></pre><h4 id="artTemplate方法一"><a href="#artTemplate方法一" class="headerlink" title="artTemplate方法一"></a>artTemplate方法一</h4><pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;basic-demo&lt;/title&gt;
+&lt;script src=&quot;../dist/template.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
 &lt;div id=&quot;content&quot;&gt;&lt;/div&gt;
 &lt;script id=&quot;test&quot; type=&quot;text/html&quot;&gt;
 {{if isAdmin}}
@@ -204,8 +217,15 @@ document.getElementById(&apos;content&apos;).innerHTML = html;
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>####artTemplate方法二<br>    &lt;!DOCTYPE HTML&gt;<br>    <html><br>    <head><meta name="generator" content="Hexo 3.8.0"><br>    <meta charset="UTF-8"><br>    <title>compile-demo</title><br>    <script src="../dist/template.js"></script><br>    </head></html></p>
-<pre><code>&lt;body&gt;
+</code></pre><h4 id="artTemplate方法二"><a href="#artTemplate方法二" class="headerlink" title="artTemplate方法二"></a>artTemplate方法二</h4><pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;compile-demo&lt;/title&gt;
+&lt;script src=&quot;../dist/template.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
 &lt;h1&gt;在javascript中存放模板&lt;/h1&gt;
 &lt;div id=&quot;content&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -225,8 +245,7 @@ document.getElementById(&apos;content&apos;).innerHTML = html;
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>####artTemplate方法三-嵌入子模板</p>
-<pre><code>&lt;!DOCTYPE HTML&gt;
+</code></pre><h4 id="artTemplate方法三-嵌入子模板"><a href="#artTemplate方法三-嵌入子模板" class="headerlink" title="artTemplate方法三-嵌入子模板"></a>artTemplate方法三-嵌入子模板</h4><pre><code>&lt;!DOCTYPE HTML&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -258,11 +277,11 @@ document.getElementById(&apos;content&apos;).innerHTML = html;
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>####注意点</p>
-<pre><code>{{each list as value i}}
+</code></pre><h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><pre><code>{{each list as value i}}
 list可以为对象或者是数组，value为值，i为索引。
-</code></pre><p>####把获取到的时间转换为现在的时间<br>    var data = new Date(Number(e.time+”000”)).toLocaleString();<br>    因为从后台传回来的是json格式的字符串，并且new Date().toLocaleString();里面必须为数字。所以用Number强制转换为数字。</p>
-
+</code></pre><h4 id="把获取到的时间转换为现在的时间"><a href="#把获取到的时间转换为现在的时间" class="headerlink" title="把获取到的时间转换为现在的时间"></a>把获取到的时间转换为现在的时间</h4><pre><code>var data = new Date(Number(e.time+&quot;000&quot;)).toLocaleString();
+因为从后台传回来的是json格式的字符串，并且new Date().toLocaleString();里面必须为数字。所以用Number强制转换为数字。
+</code></pre>
     </div>
     
     <div class="post-footer">
@@ -279,15 +298,15 @@ list可以为对象或者是数组，value为值，i为索引。
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2017/02/10/less使用/" class="pre-post btn btn-default" title=''>
+        <a href="/2017/01/06/cacas/" class="pre-post btn btn-default" title>
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
             <span class="hidden-xs"></span>
         </a>
     
     
-        <a href="/2016/12/26/字符串方法/" class="next-post btn btn-default" title=''>
+        <a href="/2016/12/26/面向对象/面向对象第七天/" class="next-post btn btn-default" title="javascript 面向对象：7">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs"></span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">javascript 面向对象：7</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -296,26 +315,18 @@ list可以为对象或者是数组，value为值，i为索引。
     <div id="comments">
         
 	
-    <div id="vcomments" class="valine"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="/assets/valine.min.js"></script>
-
-    <script>
-        new Valine({
-            av: AV,
-            el: '#vcomments',
-            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
-            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
-            placeholder: 'asdf',
-            notify: false,
-            verify: false,
-            avatar: 'mm',
-            meta: 'nick,mail'.split(','),
-            pageSize: '10',
-            path: window.location.pathname,
-            lang: 'null'.toLowerCase()
-        })
-    </script>
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
 
 
     </div>
@@ -330,7 +341,7 @@ list可以为对象或者是数组，value为值，i为索引。
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#jQuery遍历对象"><span class="toc-text">jQuery遍历对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#artTemplate方法一"><span class="toc-text">artTemplate方法一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#artTemplate方法二"><span class="toc-text">artTemplate方法二</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#artTemplate方法三-嵌入子模板"><span class="toc-text">artTemplate方法三-嵌入子模板</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意点"><span class="toc-text">注意点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#把获取到的时间转换为现在的时间"><span class="toc-text">把获取到的时间转换为现在的时间</span></a></li></ol>
         
     </div>
 </aside>

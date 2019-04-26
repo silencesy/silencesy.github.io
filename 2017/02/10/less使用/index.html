@@ -16,12 +16,13 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content="undefined">
+    <meta name="keywords" content="css预处理器">
 
 
-    <meta name="description" content="##less语法
-####一、注释的区别    /**/会编译在css文件中    //不会编译在css中
-####二、声明变量及使用    @maincolor:#92322;    使用变量...">
+    <meta name="description" content="less语法一、注释的区别/**/会编译在css文件中
+//不会编译在css中
+二、声明变量及使用@maincolor:#92322;
+使用变量 body{ color:@maincolor;}...">
 
 
 
@@ -33,7 +34,7 @@
     <!--Title-->
 
 
-<title>Silence</title>
+<title>less基础语法 | Silence</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
@@ -114,11 +115,7 @@
                             </li>
                         
                             <li role="presentation" class="text-center">
-                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
                             </li>
                         
                             <li role="presentation" class="text-center">
@@ -138,16 +135,16 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id>
+        <h1 id="less基础语法">
             
-	            NO Title!
+	            less基础语法
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            
+            <a class="category-link" href="/categories/前端/">前端</a>
         </span>
     
 
@@ -155,6 +152,8 @@
         <span class="fa-wrap">
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/css预处理器/">css预处理器</a>
                 
             </span>
         </span>
@@ -172,23 +171,41 @@
             
             
             <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>804</strong>天之前发表，文中内容可能已经过时。
+                本文于<strong>805</strong>天之前发表，文中内容可能已经过时。
             </p>
         
     </div>
     
     <div class="post-body post-content">
-        <p>##less语法</p>
-<p>####一、注释的区别<br>    /**/会编译在css文件中<br>    //不会编译在css中</p>
-<p>####二、声明变量及使用<br>    @maincolor:#92322;<br>    使用变量 body{ color:@maincolor;}</p>
-<p>####三、mixin混入<br>    .redFont{<br>        color:red;<br>    }<br>    .redBorder {<br>        border:1px solid red;<br>    }<br>    //红色文字和边框 通过class混合<br>    .redFontBorder-class {<br>        .redFont();<br>        .redBOrder();<br>    }<br>    //方法<br>    .redFont-func(){<br>        color:red;<br>    }<br>    .redBorder-func(){<br>        border:1px solid red;<br>    }</p>
-<pre><code>//红色文字和边框 通过func混合
+        <h2 id="less语法"><a href="#less语法" class="headerlink" title="less语法"></a>less语法</h2><h4 id="一、注释的区别"><a href="#一、注释的区别" class="headerlink" title="一、注释的区别"></a>一、注释的区别</h4><pre><code>/**/会编译在css文件中
+//不会编译在css中
+</code></pre><h4 id="二、声明变量及使用"><a href="#二、声明变量及使用" class="headerlink" title="二、声明变量及使用"></a>二、声明变量及使用</h4><pre><code>@maincolor:#92322;
+使用变量 body{ color:@maincolor;}
+</code></pre><h4 id="三、mixin混入"><a href="#三、mixin混入" class="headerlink" title="三、mixin混入"></a>三、mixin混入</h4><pre><code>.redFont{
+    color:red;
+}
+.redBorder {
+    border:1px solid red;
+}
+//红色文字和边框 通过class混合
+.redFontBorder-class {
+    .redFont();
+    .redBOrder();
+}
+//方法
+.redFont-func(){
+    color:red;
+}
+.redBorder-func(){
+    border:1px solid red;
+}
+
+//红色文字和边框 通过func混合
 .redFontBorder-func{
     .redFont-func();
     .redBorder-func();
 }
-</code></pre><p>####四、嵌套</p>
-<pre><code>#header{
+</code></pre><h4 id="四、嵌套"><a href="#四、嵌套" class="headerlink" title="四、嵌套"></a>四、嵌套</h4><pre><code>#header{
     width:100px;
     &gt;div{
       width:100px;
@@ -211,10 +228,19 @@
 &gt; 子代选择器
 &amp;+ 加号选择器
 &amp;~ 波浪选择器
-</code></pre><p>####五、导入@import<br>    注意这里引入less文件的时候不用加后缀名<br>    如: @import “文件名”；<br>    可以使用引入文件的变量和函数以及类名。</p>
-<p>####六、运算<br>    颜色运算<br>    @red:red*0.5;<br>    内置函数<br>    @gary:darken(#333,10%);</p>
-<p>####七、less的使用<br>    引用less文件 注意在引用的时候文件类型写type/less<br>    引用less.js文件(在浏览器上使用less，我们需要添加一个js插件 less.js 解析less文件动态加载<br>    注意：他是一部加载less文件　然后解析<br>    一定要求是　使用http形式访问　否则无法加载less文件<br>    不建议使用less.js这种形式来用less</p>
-
+</code></pre><h4 id="五、导入-import"><a href="#五、导入-import" class="headerlink" title="五、导入@import"></a>五、导入@import</h4><pre><code>注意这里引入less文件的时候不用加后缀名
+如: @import &quot;文件名&quot;；
+可以使用引入文件的变量和函数以及类名。
+</code></pre><h4 id="六、运算"><a href="#六、运算" class="headerlink" title="六、运算"></a>六、运算</h4><pre><code>颜色运算
+@red:red*0.5;
+内置函数
+@gary:darken(#333,10%);
+</code></pre><h4 id="七、less的使用"><a href="#七、less的使用" class="headerlink" title="七、less的使用"></a>七、less的使用</h4><pre><code>引用less文件 注意在引用的时候文件类型写type/less
+引用less.js文件(在浏览器上使用less，我们需要添加一个js插件 less.js 解析less文件动态加载
+注意：他是一部加载less文件　然后解析
+一定要求是　使用http形式访问　否则无法加载less文件
+不建议使用less.js这种形式来用less
+</code></pre>
     </div>
     
     <div class="post-footer">
@@ -231,15 +257,15 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2017/02/12/正则表达式/" class="pre-post btn btn-default" title>
+        <a href="/2017/02/12/正则表达式/" class="pre-post btn btn-default" title="正则">
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs"></span>
+            <span class="hidden-xs">正则</span>
         </a>
     
     
-        <a href="/2017/01/06/art-template的模板引擎/" class="next-post btn btn-default" title>
+        <a href="/2017/01/09/canvas第三天/" class="next-post btn btn-default" title="canvas基础三">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs"></span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">canvas基础三</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -248,26 +274,18 @@
     <div id="comments">
         
 	
-    <div id="vcomments" class="valine"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="/assets/valine.min.js"></script>
-
-    <script>
-        new Valine({
-            av: AV,
-            el: '#vcomments',
-            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
-            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
-            placeholder: 'asdf',
-            notify: false,
-            verify: false,
-            avatar: 'mm',
-            meta: 'nick,mail'.split(','),
-            pageSize: '10',
-            path: window.location.pathname,
-            lang: 'null'.toLowerCase()
-        })
-    </script>
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
 
 
     </div>
@@ -282,7 +300,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#less语法"><span class="toc-text">less语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、注释的区别"><span class="toc-text">一、注释的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、声明变量及使用"><span class="toc-text">二、声明变量及使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、mixin混入"><span class="toc-text">三、mixin混入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、嵌套"><span class="toc-text">四、嵌套</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、导入-import"><span class="toc-text">五、导入@import</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#六、运算"><span class="toc-text">六、运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#七、less的使用"><span class="toc-text">七、less的使用</span></a></li></ol></li></ol>
         
     </div>
 </aside>

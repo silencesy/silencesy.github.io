@@ -1,0 +1,435 @@
+<!DOCTYPE HTML>
+<html lang="null">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Silence">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="面向对象">
+
+
+    <meta name="description" content="
+复习 -&gt; 继承
+原型式继承
+    function Person() {}
+    Person.prototype = 父对象;
+    var p = new Person();...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>javascript 面向对象：3 | Silence</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="Silence">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> Rain </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Silence</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="javascript 面向对象：3">
+            
+	            javascript 面向对象：3
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/面向对象/">面向对象</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2016/12/21</span>
+        </span>
+        
+    
+</div>
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>856</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <ol>
+<li><p>复习<br> -&gt; 继承</p>
+<pre><code>原型式继承
+    function Person() {}
+    Person.prototype = 父对象;
+    var p = new Person();
+    p 继承自 父对象
+混入 ( mix, extend )
+    function extend( o1, o2 ) {
+        for ( var k in o2 ) {
+            o1[ k ] = o2[ k ];
+        }
+    }
+注意命名规则: 
+    1&gt; 一般 将一个对象混入另一个对象, 使用 mix
+    2&gt; 如果是当前对象的方法. 是将另一个对象混入当前对象一般使用 extend
+</code></pre></li>
+<li><p>对象的原型链<br> -&gt; 凡是对象都有原型<br> -&gt; 构造函数 Person 创建的对象 p 有原型 Person.prototype</p>
+<p> -&gt; Person.prototype 是对象. 它有原型吗?<br> -&gt; 问题: </p>
+<pre><code>1) 原型是什么?
+2) 原型既然是对象, 那么如何是个头?    
+</code></pre><p> -&gt; 结论</p>
+<pre><code>1) Person.prototype 是 实例 p 的原型对象, 使用 __proto__ 可以访问对象的原型对象
+2) Person.prototype 的 原型对象是 Person.prototype.__proto__
+3) Person.prototype.__proto__ 里的 constructor 是 Object. 所以
+    Person.prototype.__proto__ 就是 Object.prototype
+4) Object.prototype.__proto__ 是 null. 因此表明 Object.prototype 就是顶级.
+</code></pre><p> -&gt; 链式</p>
+<pre><code>p --&gt; Person.prototype( p.__proto__ ) --&gt; Object.prototype --&gt; null
+</code></pre><p> -&gt; 系统内置的原型链</p>
+<pre><code>[] --&gt; Array.prototype --&gt; Object.prototype --&gt; null
+/./ --&gt; RegExp.prototype --&gt; Object.prototype --&gt; null 
+... ...
+</code></pre></li>
+<li><p>绘制数组的原型结构<br> var arr = [];<br> // 等价<br> var arr = new Array();</p>
+<p> arr –&gt; Array.prototype –&gt; Object.prototype –&gt; null</p>
+</li>
+<li><p>练习:<br> 根据下面代码绘制对象的原型链结构<br> 1)     function Person( name, age, gender ) {</p>
+<pre><code>    this.name = name;
+    this.age = age;
+    this.gender = gender;
+}
+function Student () {}
+
+Student.prototype = new Person( &apos;张三&apos;, 19, &apos;男&apos; );
+
+var stu = new Student();
+</code></pre><p> 2)  function Person() {}</p>
+<pre><code>var p1 = new Person();
+var p2 = new Person();
+</code></pre></li>
+<li><p>{} 对象的原型链结构<br> 在 js 中 对象 一般都有字面量</p>
+<pre><code>123, &apos;123&apos;
+</code></pre><p> 数组: []<br> 正则表达式对象: /./<br> 函数: function () {}<br> …</p>
+<p> 对象也有字面量: {}<br> {} –&gt; Object.prototype –&gt; null</p>
+<p> 注意: {} 与 new Object() 含义相同</p>
+</li>
+</ol>
+<ol>
+<li><p>动态函数 Function<br> -&gt; 动态函数就是在运行的过程中, 将一段字符串作为代码运行. </p>
+<pre><code>由于字符串可以随意的拼接. 因此得到动态的执行.
+</code></pre><p> -&gt; 定义动态函数, 并执行</p>
+<pre><code>-&gt; 使用 Function 构造函数, 创建函数.
+    Function 是一个构造函数. new Function 得到 一个函数
+-&gt; 语法
+    new Function( arg0, arg1, ..., argN, body )
+
+    Function 的所有的参数, 除了最后一个以外, 都是生成的函数的参数
+    最后一个参数是 函数体
+</code></pre></li>
+<li><p>函数的相关的一些参数<br> arguments 凡是函数调用, 都会默认含有一个 arguments 对象. 可以将其看做为 “数组”. 里面存储着调用时</p>
+<pre><code>传入的所有参数. 可以使用数组的索引访问这些参数.
+例如: 写一个函数, 在参数中写任意个参数, 最后求其和
+    function sum () {
+        // 所有的参数都会存储到 arguments 中
+        var sum = 0;
+        for ( var i = 0; i &lt; arguments.length; i++ ) {
+            sum += arguments[ i ];
+        }
+        return sum;
+    }
+
+案例:     extend( o )  =&gt; 将 o 混入到当前对象 this 中
+        extend( o1, o2 ) =&gt; 将 o2 混入到 o1 中
+</code></pre><p> 函数名.length, 即函数的 length 属性. 表示 定义函数时, 参数的个数</p>
+<p> 如果定义函数的时候, 定义了参数. 但是调用的时候又没有传递该参数. 那么该参数在函数内就是 undefined</p>
+<p> 函数.name 返回的是函数名</p>
+</li>
+<li><p>函数的引用 callee 与 caller<br> js 中函数也是一个对象<br> -&gt; callee 在函数的内部, 它表示 当前函数 的引用<br> 一般在函数内部, 实现函数递归的时候, 我们一般使用 callee 表示函数的引用<br> function fn() {</p>
+<pre><code>arguments.callee();  // 使用 callee 来递归
+</code></pre><p> }<br> fn();<br> -&gt; caller 表示调用函数的函数 //caller 就是在被调用函数中, 获得调用函数的引用<br> function f2 () {</p>
+<pre><code>console.log( f2.caller );
+</code></pre><p> }</p>
+<p> function itcast() {</p>
+<pre><code>f2();    
+</code></pre><p> }</p>
+<p> itcast();</p>
+</li>
+<li><p>eval 函数<br> eval 函数与 Function 功能类似. eval 可以直接将字符串作为代码来执行.<br> 语法:</p>
+<pre><code>eval( 语句字符串 )
+</code></pre><p> 注意, 它好像与当前代码处于同一个作用域<br> eval 直接调用即执行。<br> Function 生成了一个函数function 需要调用才执行</p>
+</li>
+<li><p>使用 ajax 获得 json 格式的字符串后, 转换成对象<br>var data = ‘[ { “name”: “张三”, “age”: 19, “gender”: “男”}, { “name”: “李四”, “age”: 18, “gender”: “女”} ]’;<br>  json 格式( 严格的国际通用数据表示协议, 结构 )<br>  在 js 中使用的 json 对象, 相对较松散<br>  json 格式 有两种结构</p>
+<pre><code>1: {}
+2: []
+注意: json 格式中, 键名也必须使用双引号括起来.
+
+ 将字符串变成对象, 有三种做法
+ 1. eval 做法
+</code></pre><p>var o1 = eval( “(“ + data + “)” );   // 注意一个习惯. 就是数据两端一般加上圆括号为好</p>
+<pre><code>2. Function 做法
+</code></pre><p>var o2 = (new Function( ‘return ‘ + data ))();</p>
+<pre><code>3. 使用 ES5 中引入的标准处理 JSON 的语法
+JSON.parse(  )
+注意: 字符串必须是严格是 json 格式
+</code></pre><p>var o3 = JSON.parse( data );</p>
+</li>
+</ol>
+<ol>
+<li><p>在 js 中 函数 是 Function 的实例</p>
+<p>function Person() {}<br>var p = new Person();<br>p 是 构造函数 Person 的实例</p>
+<p>在 该角度去看, 函数就是对象, Function 就是构造函数</p>
+<p>得到 构造-实例-原型 三角形</p>
+<p>function Person() {} 为例</p>
+</li>
+<li><p>给定一个任意的对象, 将其原型链包括对象和函数的结构完整的分析处理</p>
+</li>
+<li><p>instanceof 运算符<br>-&gt; a of b -&gt; b 的 a<br>-&gt; instance of ?<br>-&gt; 错觉: 判断某一个对象是否为某一个构造函数所创建出来的</p>
+</li>
+</ol>
+<ol>
+<li><p>通过原型链的学习, 可以重新定义 js 的继承</p>
+<p>js 的继承: 就是利用对象的动态特性添加成员, 或直接替换对象的方式修改原型链</p>
+<pre><code>结构. 使得当前对象的原型链上的对象具有某些成员. 那么我的当前对象
+就可以使用这些成员了.
+</code></pre><p>p -&gt; Person.prototype -&gt; Object.prototype -&gt; null<br>p -&gt; Person.prototype -&gt; {} -&gt; Object.prototype -&gt; null</p>
+<p>过多的依赖原型链继承, 会损耗 性能<br>如果必须使用原型链继承, 最好提供一些快速访问的方法</p>
+</li>
+</ol>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2016/12/22/面向对象/面向对象第二天/" class="pre-post btn btn-default" title="javascript 面向对象：2">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">javascript 面向对象：2</span>
+        </a>
+    
+    
+        <a href="/2016/12/20/面向对象/面向对象第四天/" class="next-post btn btn-default" title="javascript 面向对象：4">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">javascript 面向对象：4</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2016
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+</body>
+</html>

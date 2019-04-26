@@ -1,0 +1,517 @@
+<!DOCTYPE HTML>
+<html lang="null">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Silence">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="面向对象">
+
+
+    <meta name="description" content="1 forEach    var arr = [ ‘hello’, ‘ js’, {  }, function () {} ];    // 遍历 数组    arr.forEach( func...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>javascript 面向对象：6 | Silence</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="Silence">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> Rain </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Silence</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="javascript 面向对象：6">
+            
+	            javascript 面向对象：6
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/面向对象/">面向对象</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2016/12/24</span>
+        </span>
+        
+    
+</div>
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>852</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>1 forEach<br>    var arr = [ ‘hello’, ‘ js’, {  }, function () {} ];<br>    // 遍历 数组<br>    arr.forEach( function ( v, i ) {<br>        console.log( i + ‘=====’ + v );<br>    });</p>
+<pre><code>2 map 映射
+语法:         数组.map( fn )
+返回一个数组, 数组的每一个元素就是 map 函数中的 fn 的返回值
+var arr = [ 1, 2, 3, 4 ];
+
+数学中: x -&gt; x * x
+var a = arr.map(function ( v, i ) {
+    return v * v;
+});
+
+
+3 filter 就是筛选
+语法:     数组.filter( function ( v, i ) { return true/false })
+var arr = [ 1, 2, 3, 4, 5, 6 ];
+var a = arr.filter( function ( v ) { return v % 2 === 1; });
+
+
+4 some 判断数组中至少有一个数据复合要求 就返回 true, 否则返回 false
+var arr = [ &apos;123&apos;, {}, function () {}, &apos;123&apos; ];
+判断数组中至少有一个数数字
+var isTrue = arr.some( function ( v ) { return typeof v === &apos;number&apos;; } );
+
+5 every 必须满足所有元素都复合要求才会返回 true
+var arr = [ 1, 2, 3, 4, 5, &apos;6&apos; ];
+var isTrue = arr.every( function ( v ) { return typeof v === &apos;number&apos;; } );
+
+
+6 indexOf 在数组中查找元素, 如果含有该元素, 返回元素的需要( 索引 ), 否则返回 -1
+var arr = [ 1, 2, 3, 4, 5 ];
+var res = arr.indexOf( 4 );
+console.log( res );
+
+var arr = [ 1, 2, 3, 4, 5, 4, 5, 6 ];
+var res = arr.indexOf( 4, 4 );
+console.log( res );
+
+7 lastIndexOf 从右往左找
+var arr = [ 1, 2, 3, 4, 5, 4, 5, 6 ];
+var res = arr.lastIndexOf( 4 );
+console.log( res );
+</code></pre><ol>
+<li><p>函数的四种调用模式<br> -&gt; 函数有下列调用模式</p>
+<pre><code>1&gt; 函数模式
+2&gt; 方法模式
+3&gt; 构造器模式
+4&gt; 上下文模式
+</code></pre></li>
+<li><p>函数调用 模式<br> -&gt; 函数的定义方式</p>
+<pre><code>1&gt; 声明式
+2&gt; 表达式式
+3&gt; Function
+</code></pre><p> -&gt; 单独独立调用的就是函数</p>
+<pre><code>函数名( 参数 )
+</code></pre><p> -&gt; this 表示全局对象<br> -&gt; 任何自调用函数都是函数模式</p>
+</li>
+<li><p>方法调用 模式   method<br> -&gt; 区分</p>
+<pre><code>方法本身就是函数, 但是方法不是单独独立的调用, 而是通过一个对象引导调用.
+
+对象.方法( 参数 )
+</code></pre><p> -&gt; this 表示引导方法的对象</p>
+</li>
+<li><p>面试题<br> var length = 10;<br> function fn() {</p>
+<pre><code>console.log( this.length );
+</code></pre><p> }<br> var obj = {</p>
+<pre><code>length: 5,
+method: function ( fn ) {
+    fn();
+    arguments[ 0 ]();
+}
+</code></pre><p> };<br> obj.method( fn, 1 );</p>
+</li>
+<li><p>构造器模式(构造函数模式, 构造方法模式)<br> constructor<br> -&gt; 区分</p>
+<pre><code>使用 new 关键字引导
+</code></pre><p> -&gt; 执行步骤</p>
+<pre><code>var p = new Person();
+new 是一个运算符, 专门用来申请创建对象, 创建出来的对象传递给构造函数的 this
+利用构造函数对其初始化
+
+function Person () {
+    this.name = &apos;jim&apos;,
+    this.age = 19;
+    this.gender = &apos;male&apos;;
+}
+</code></pre><p> -&gt; 返回值</p>
+<pre><code>如果不写 return 语句, 那么 构造函数 默认返回 this
+如果在构造函数中写上 return 语句, 并紧跟基本类型( return num, return 1223 ). 则忽略返回类型. 
+如果在构造函数中写上 return 语句, 并且紧跟引用类型, 那么构造函数返回该引用类型数据, 而忽略 this
+</code></pre><p> -&gt; 如果调用构造函数的时候, 构造函数没有参数, 圆括号是可以省略的</p>
+</li>
+</ol>
+<ol>
+<li><p>关于构造函数结核性的一个小结<br> 1&gt; 如果构造函数没有参数, 可以省略 圆括号</p>
+<pre><code>var p = new Person;
+</code></pre><p> 2&gt; 如果希望创建对象并直接调用其方法</p>
+<pre><code>( new Person () ).sayHello()
+-&gt; 可以省略调整结核性的圆括号
+    new Person().sayHello()
+-&gt; 如果想要省略构造函数的圆括号, 就必须添加结核性的圆括号
+    (new Person).sayHello()
+</code></pre></li>
+<li><p>上下文调用模式<br> 就是 环境调用模式 =&gt; 在不同环境下的不同调用模式<br> 简单说就是统一一种格式, 可以实现 函数模式与方法模式</p>
+<p> -&gt; 语法(区分)</p>
+<pre><code>1&gt; call 形式
+    函数名.call( ... )
+2&gt; apply 形式
+    函数名.apply( ... )
+这两种形式功能完全一样, 唯一不同的是参数的形式. 首先学习 apply, 再来看 call 形式
+</code></pre><p> -&gt; 用法</p>
+<pre><code>存在上下文调用的目的就是为了实现借用方法
+
+function foo () {
+    console.log( this );
+}
+
+var o = { name: &apos;jim&apos; };
+
+foo();
+
+o.func = foo;
+o.func();
+
+// 如果需要让函数以函数的形式调用, 可以使用
+foo.apply( null ) 或 foo.apply()
+
+// 如果希望他是方法调用模式, 注意需要提供一个宿主对象
+foo.apply( o )
+</code></pre><p> -&gt; 带有参数的函数如何实现上下文调用</p>
+<pre><code>function foo ( num1, num2 ) {
+    console.log( this );
+    return num1 + num2;
+} 
+
+// 函数调用模式
+var res1 = foo( 123, 567 );
+
+// 方法调用
+var o = { name: &apos;jim&apos; };
+o.func = foo;
+
+var res2 = o.func( 123, 567 );
+
+使用 apply 进行调用, 如果函数是带有参数的. apply 的第一个参数要么是 null 要么是对象
+如果是 null 就是函数调用, 如果是 对象就是 方法对象, 该对象就是宿主对象, 后面紧跟一个
+数组参数, 将函数的参数依次放在数组中.    
+
+例如: 函数模式         foo( 123, 567 );
+      apply            foo.apply( null, [ 123, 567 ] )
+
+如果有一个函数调用: func( &apos;张三&apos;, 19, &apos;男&apos; ), 将其修改成 apply 模式
+func.apply( null, [ &apos;张三&apos;, 19, &apos;男&apos;] )
+
+方法模式:            o.func( 123, 567 )
+apply                foo.apply( o, [ 123, 567 ] )
+</code></pre></li>
+</ol>
+<ol>
+<li><p>call 调用<br> 在使用 apply 调用的时候, 函数参数, 必须以数组的形式存在. 但是有些时候数组封装比较复杂<br> 所以引入 call 调用, call 调用与 apply 完全相同, 唯一不同是是参数不需要使用数组</p>
+<p> foo( 123, 567 );</p>
+<p> foo.apply( null, [ 123, 567 ] );</p>
+<p> foo.call( null, 123, 567 );</p>
+</li>
+</ol>
+<ol>
+<li><p>借用构造方法实现继承<br> function Person ( name, age, gender ) {</p>
+<pre><code>this.name = name;
+this.age = age;
+this.gender = gender;
+</code></pre><p> }</p>
+<p> function Student ( name, age, gender, course ) {</p>
+<pre><code>Person.call( this, name, age, gender );
+
+this.course = course;
+</code></pre><p> }</p>
+<p> var p = new Student ( ‘jim’, 19, ‘male’, ‘前端’ );</p>
+</li>
+</ol>
+<ol>
+<li>函数的 bind 方法<br>bind 就是 绑定</li>
+</ol>
+<ol>
+<li><p>Object.prototype 的成员<br>1) constructor<br>2) hasOwnProperty 判断该属性是否为自己提供<br>3) propertyIsEnumerable 判断属性是否可以枚举<br>4) isPrototypeOf    判断是否为原型对象<br>5) toString, toLocaleString, valueOf</p>
+</li>
+<li><p>包装对象<br>字符串 string 是基本类型, 理论上讲不应该包含方法<br>charAt, substr, slice, …</p>
+<p>在 js 中为了更好的使用数据, 为三个基本类型提供了对应的对象类型</p>
+<p>Number<br>String<br>Boolean</p>
+<p>在 开发中常常会使用基本数据类型, 但是基本数据类型没有方法, 因此 js 引擎会在需要的时候<br>自动的将基本类型转换成对象类型.</p>
+<p>“abc”.charAt( 1 )</p>
+<p>“abc” -&gt; new String( “abc” )<br>s.charAt( 1 ) 返回结果<br>s 就被销毁</p>
+<p>当    基本类型.方法 的时候. 解释器首先将基本类型转换成对应的对象类型, 然后调用方法.<br>方法执行结束后, 这个对象就被立刻回收</p>
+<p>在 apply 和 call 调用的时候, 也会有转换发生. 上下文调用的第一个参数必须是对象. 如果传递的是数字<br>就会自动转换成对应的包装类型</p>
+</li>
+<li><p>getter 与 setter 的语法糖</p>
+<p>语法糖: 为了方便开发而给出的语法结构</p>
+<p>var o = (function () {</p>
+<pre><code>var num = 123;
+return {
+    get_num: function () {
+        return num;
+    },
+    set_num: function ( v ) {
+        num = v;
+    }
+};
+</code></pre><p>})();</p>
+<p>// 获得数据<br>o.get_num();            =&gt; o.num 形式</p>
+<p>// 设置<br>o.set_num( 456 );        =&gt; o.num = 456 形式</p>
+<p>var o = (function () {</p>
+<pre><code>var num = 123;
+return {
+
+    // get 名字 () { 逻辑体 }
+    get num () {
+        return num;
+    }
+
+    // set 名字 ( v ) { 逻辑体 }
+    set num ( v ) {
+        num = v;
+    }
+};
+</code></pre><p>})();</p>
+</li>
+<li><p>ES5 中引入的部分数组方法<br>1&gt; forEach<br>2&gt; map<br>3&gt; filter<br>4&gt; some<br>5&gt; every<br>6&gt; indexOf<br>7&gt; lastIndexOf</p>
+</li>
+</ol>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2016/12/26/字符串方法/" class="pre-post btn btn-default" title="javaScript 字符串操作">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">javaScript 字符串操作</span>
+        </a>
+    
+    
+        <a href="/2016/12/23/面向对象/面向对象第五天/" class="next-post btn btn-default" title="javascript 面向对象：5">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">javascript 面向对象：5</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2016
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+</body>
+</html>

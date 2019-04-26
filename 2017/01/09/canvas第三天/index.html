@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html lang="null">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Silence">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="canvas">
+
+
+    <meta name="description" content="#### 
+
+图片绘制 创建图片元素 document.createElement( ‘img’ ) var img = new Image(); img.src = ‘’;资源图片的路径。 c...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>canvas基础三 | Silence</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="Silence">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> Rain </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Silence</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="canvas基础三">
+            
+	            canvas基础三
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/canvas/">canvas</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2017/01/09</span>
+        </span>
+        
+    
+</div>
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>836</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>#### </p>
+<ol>
+<li>图片绘制<br> 创建图片元素<br> document.createElement( ‘img’ )<br> var img = new Image();<br> img.src = ‘’;资源图片的路径。<br> ctx.drawImage()<br> 有三种调用形式<br> 1&gt; ctx.drawImage( img, x, y ) 将 image 绘制到 x, y 表示的位置<br> 2&gt; ctx.drawImage( img, x, y, width, height ) 将 img 绘制到一个矩形区域内<br> 说明，前面的x，y为绘制起始的位置，后面的width和height是图片显示的大小。<br> 这里可以使x,y加一个数字实现叠图的效果。<br> 3&gt; ctx.drawImage( img, sx, sy, sw, sh, x, y, w, h )<pre><code>将图片 img 的 sx, sy, sw, sh 部分的内容绘制到画布的x, y, w, h 的矩形区域内.
+</code></pre> 说明sx,sy是资源图片的起始位置，sw,sh资源图片的宽高，x,y目标显示起始坐标，目标显示宽高。</li>
+</ol>
+<ol>
+<li><p>计时器模型<br> var id = setInterval(function () {</p>
+<pre><code>if ( 条件 ) {
+
+    clearInterval( id );
+}
+</code></pre></li>
+</ol>
+<pre><code>    // 继续执行我的内容
+
+}, 20);
+知识点：ctx.clearRect( 0, 0, cas.width, cas.height );擦除整个画布。
+动画：核心代码参考
+&lt;script&gt;
+    function toAngle( radian ) {
+        return radian * 180 / Math.PI;
+    }
+    function toRadian( angle ) {
+        return angle * Math.PI / 180;
+    }
+    var cas = document.getElementById( &apos;cas&apos; );
+    var ctx = cas.getContext( &apos;2d&apos; );
+    var img = new Image();
+    img.src = &apos;NPCrabbitbaby-2.png&apos;;
+    img.onload = function() {
+        var width = img.width / 4;
+        var height = img.height / 4;
+        var i = 0;
+        setInterval(function() {
+        ctx.clearRect( 0, 0, cas.width, cas.height );
+        ctx.drawImage( img, i*width,0,width,height,100,100,width,height);
+        if ( i == 3) {
+            i = 0;
+        } else {
+            i++;
+        }
+    },200);
+</code></pre><p>}</p>
+<ol>
+<li><p>变换的概念<br> 计算机绘图是利用坐标进行绘图. 绘制任何图形都和坐标系的结构息息相关.</p>
+<p> 所谓的变换就是一套数学公式, 可以记录坐标轴的变化方式.<br> 利用坐标轴的变换可以绘制出, 根据不同坐标轴特点而形成的图形.</p>
+<p> 基本的 api<br> ctx.translate(x,y)        平移变换<br> ctx.rotate(reg)        旋转变换<br> ctx.scale(x,y)            伸缩变换</p>
+</li>
+</ol>
+<ol>
+<li><p>封装绘图对象<br> Line<br> Rect<br> Circle    x, y, radius, strokeStyle, fillStyle, lineWidth<br> Arc</p>
+<p> function Line( config ) {</p>
+<p> }<br> Line.prototype = {</p>
+<pre><code>stroke: function () {
+
+}
+</code></pre><p> }</p>
+</li>
+</ol>
+<ol>
+<li><p>canvas 的状态<br> 在 Canvas 中凡是设置了属性效果, 都会延续到后面一次修改<br> Canvas 在创建出来的时候, 是有一个默认的状态的<br> 我希望每次修改状态的时候 都是不影响原来默认状态的<br> 每次画完图时, 我都会新建一个状态, 然后绘制完成后<br> 恢复到原有状态</p>
+<p> ctx.save()        将当前状态保存<br> ctx.restore()     将保存的状态恢复</p>
+<p> 状态栈</p>
+</li>
+<li><p>在 canvas 绘制的时候允许使用 canvas 绘制 canvas</p>
+<p> ctx.darwImage( img, … )</p>
+<p> 此时 img 可以是 图片, 还可以是 canvas, 甚至是 video</p>
+</li>
+</ol>
+<ol>
+<li>Konva 是一个完全面向对象的框架<br> 将所有的东西都看做是对象: 图片, 直线, 矩形, …<br> 将整个canvas看做成舞台(stage)<br> 在舞台上放一个层, 那么将所有的图形放在这个层中</li>
+</ol>
+<pre><code>命名空间
+
+var num = 123;
+function foo() {}
+// 污染全局作用域
+var Itcast = {};
+
+Itcast.num = 123;
+Itcast.foo = function () {};
+</code></pre><ol>
+<li><p>获取当前字体大小的情况下某些文字占用的宽度和高度<br> ctx.font = “20px”;<br> var obj = ctx.measureText(“你好”);<br> obj.width  obj.height</p>
+</li>
+<li><p>在canvas里面绘制图片：<br> A.创建一个图片对象<br>   var img = new Image();//创建一个图片对象<br>   img.src = ‘1.jpg’;</p>
+<p> B.等图片对象加载完成以后，将图片对象绘制到canvas里面去<br>   //等待img对象加载完成以后，执行函数<br>   img.onload = function(){</p>
+<pre><code>//1.将图片绘制到canvas里面的坐标0，0处
+ctx.drawImage( img , 0 , 0 );
+
+//2.将图片绘制到canvas里面的坐标0,0处，并且图片大小为width,height
+ctx.drawImage( img , 0, 0, width, height);
+
+//3.将图片img的sx,sy坐标处的sw,sh大小的图片区域绘制到canvas里面的x,y坐标处的大小为w,h            //的区域中
+ctx.drawImage( img , sx,sy,sw,sh,  x,y,w,h);
+</code></pre><p>   }</p>
+</li>
+</ol>
+<ol>
+<li>变换的概念：<br>我们现在的canvas绘图都是通过坐标来进行绘制。<br>所谓的坐标就是canvas坐标系中的一个点。<br>canvas的坐标系可以通过变换来进行改变，当canvas的坐标系发生了改变的时候，坐标点也会跟着发生改变。<br>最后我们可以通过变换来画出一些比较好看的图形。</li>
+</ol>
+<pre><code>变换的api方法：
+    A.translate(x,y);//平移变换，
+    B.rotate(deg);//旋转坐标系，旋转deg度
+    C.scale(2,0.5);//缩放变换,  x轴放大2倍，y轴缩小一半
+</code></pre>
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/02/10/less使用/" class="pre-post btn btn-default" title="less基础语法">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">less基础语法</span>
+        </a>
+    
+    
+        <a href="/2017/01/09/canvas第二天/" class="next-post btn btn-default" title="canvas基础二">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">canvas基础二</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2016
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+</body>
+</html>

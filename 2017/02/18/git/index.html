@@ -16,7 +16,7 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content="undefined">
+    <meta name="keywords" content="工具">
 
 
     <meta name="description" content="Git什么是Git?
@@ -37,7 +37,7 @@ Git是一款源代码管理工具(版本控制工具)
     <!--Title-->
 
 
-<title>git总结 | Silence</title>
+<title>git | Silence</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
@@ -118,11 +118,7 @@ Git是一款源代码管理工具(版本控制工具)
                             </li>
                         
                             <li role="presentation" class="text-center">
-                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
                             </li>
                         
                             <li role="presentation" class="text-center">
@@ -142,16 +138,16 @@ Git是一款源代码管理工具(版本控制工具)
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="git总结">
+        <h1 id="git">
             
-	            git总结
+	            git
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            
+            <a class="category-link" href="/categories/前端/">前端</a>
         </span>
     
 
@@ -159,6 +155,8 @@ Git是一款源代码管理工具(版本控制工具)
         <span class="fa-wrap">
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/工具/">工具</a>
                 
             </span>
         </span>
@@ -176,7 +174,7 @@ Git是一款源代码管理工具(版本控制工具)
             
             
             <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>796</strong>天之前发表，文中内容可能已经过时。
+                本文于<strong>797</strong>天之前发表，文中内容可能已经过时。
             </p>
         
     </div>
@@ -338,6 +336,26 @@ Git是一款源代码管理工具(版本控制工具)
 </ul>
 </li>
 </ul>
+<h2 id="git使用ssh方式上传代码与github"><a href="#git使用ssh方式上传代码与github" class="headerlink" title="git使用ssh方式上传代码与github"></a>git使用ssh方式上传代码与github</h2><ul>
+<li>git生成公钥和私钥<ul>
+<li>命令:<code>ssh-keygen -t rsa</code>生成的公钥与私钥文件会在当用户目录的.ssh目录下.</li>
+</ul>
+</li>
+</ul>
+<h3 id="把代码push到服务器时需要先pull一下"><a href="#把代码push到服务器时需要先pull一下" class="headerlink" title="把代码push到服务器时需要先pull一下"></a>把代码push到服务器时需要先pull一下</h3><ul>
+<li>在pull之后如果远程的代码与本地的代码有冲突，git会先自动合并冲突，如果不能自动合并，就必需我们手动去处理冲突。</li>
+</ul>
+<h3 id="从服务器上pull代码到本地"><a href="#从服务器上pull代码到本地" class="headerlink" title="从服务器上pull代码到本地"></a>从服务器上pull代码到本地</h3><ul>
+<li>如果本地没有.git目录，需要先初始化一下。</li>
+<li>命令:<code>git pull [远程服务器地址] [远程的分支]</code></li>
+</ul>
+<h3 id="gh-pages分支-搭建博客"><a href="#gh-pages分支-搭建博客" class="headerlink" title="gh-pages分支-搭建博客."></a>gh-pages分支-搭建博客.</h3><ul>
+<li>需要把自已博客的网页代码上传到github上的gh-pages分支</li>
+<li>然后就直接访问了<ul>
+<li>访问的url形式: [github用户名].github.io/[仓库的名字]/[具体的页面]</li>
+</ul>
+</li>
+</ul>
 
     </div>
     
@@ -355,15 +373,15 @@ Git是一款源代码管理工具(版本控制工具)
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2017/02/18/git续编/" class="pre-post btn btn-default" title="git续篇">
+        <a href="/2017/02/18/npm browser gulp使用/" class="pre-post btn btn-default" title="npm browser gulp使用">
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">git续篇</span>
+            <span class="hidden-xs">npm browser gulp使用</span>
         </a>
     
     
-        <a href="/2017/02/18/hello-world/" class="next-post btn btn-default" title="Hello World">
+        <a href="/2017/02/12/正则表达式/" class="next-post btn btn-default" title="正则">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">Hello World</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">正则</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -372,26 +390,18 @@ Git是一款源代码管理工具(版本控制工具)
     <div id="comments">
         
 	
-    <div id="vcomments" class="valine"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="/assets/valine.min.js"></script>
-
-    <script>
-        new Valine({
-            av: AV,
-            el: '#vcomments',
-            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
-            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
-            placeholder: 'asdf',
-            notify: false,
-            verify: false,
-            avatar: 'mm',
-            meta: 'nick,mail'.split(','),
-            pageSize: '10',
-            path: window.location.pathname,
-            lang: 'null'.toLowerCase()
-        })
-    </script>
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
 
 
     </div>
@@ -406,7 +416,7 @@ Git是一款源代码管理工具(版本控制工具)
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git"><span class="toc-text">Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是Git"><span class="toc-text">什么是Git?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式版本管理工具，集中式"><span class="toc-text">分布式版本管理工具，集中式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git安装"><span class="toc-text">git安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git初始化一个仓库"><span class="toc-text">git初始化一个仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自报家门"><span class="toc-text">自报家门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#把代码提交到仓库中"><span class="toc-text">把代码提交到仓库中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看工作区状态"><span class="toc-text">查看工作区状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加忽略文件"><span class="toc-text">添加忽略文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比对文件差异"><span class="toc-text">比对文件差异</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看日志"><span class="toc-text">查看日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本回退"><span class="toc-text">版本回退</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建分支"><span class="toc-text">创建分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切换分支"><span class="toc-text">切换分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#合并分支"><span class="toc-text">合并分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除分支"><span class="toc-text">删除分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git提交中的冲突"><span class="toc-text">git提交中的冲突</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github"><span class="toc-text">github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#github与git"><span class="toc-text">github与git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上传代码到git服务器-push"><span class="toc-text">上传代码到git服务器(push)</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git"><span class="toc-text">Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是Git"><span class="toc-text">什么是Git?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式版本管理工具，集中式"><span class="toc-text">分布式版本管理工具，集中式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git安装"><span class="toc-text">git安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git初始化一个仓库"><span class="toc-text">git初始化一个仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自报家门"><span class="toc-text">自报家门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#把代码提交到仓库中"><span class="toc-text">把代码提交到仓库中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看工作区状态"><span class="toc-text">查看工作区状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加忽略文件"><span class="toc-text">添加忽略文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比对文件差异"><span class="toc-text">比对文件差异</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看日志"><span class="toc-text">查看日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本回退"><span class="toc-text">版本回退</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建分支"><span class="toc-text">创建分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切换分支"><span class="toc-text">切换分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#合并分支"><span class="toc-text">合并分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除分支"><span class="toc-text">删除分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git提交中的冲突"><span class="toc-text">git提交中的冲突</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github"><span class="toc-text">github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#github与git"><span class="toc-text">github与git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上传代码到git服务器-push"><span class="toc-text">上传代码到git服务器(push)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git使用ssh方式上传代码与github"><span class="toc-text">git使用ssh方式上传代码与github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#把代码push到服务器时需要先pull一下"><span class="toc-text">把代码push到服务器时需要先pull一下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#从服务器上pull代码到本地"><span class="toc-text">从服务器上pull代码到本地</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gh-pages分支-搭建博客"><span class="toc-text">gh-pages分支-搭建博客.</span></a></li></ol></li></ol>
         
     </div>
 </aside>

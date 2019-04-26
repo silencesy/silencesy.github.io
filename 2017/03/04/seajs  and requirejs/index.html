@@ -16,11 +16,10 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content="undefined">
+    <meta name="keywords" content="模块化开发">
 
 
-    <meta name="description" content="##为什么要使用模块化
-
+    <meta name="description" content="为什么要使用模块化
 全局变量、全局函数，容易造成变量名冲突
 页面引入了一堆的js文件，存在先后顺序的问题
 代码由于组织混乱很容易出错
@@ -29,7 +28,7 @@
 
 
 模块化的好处
-提升开...">
+提升开发效率...">
 
 
 
@@ -122,11 +121,7 @@
                             </li>
                         
                             <li role="presentation" class="text-center">
-                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
                             </li>
                         
                             <li role="presentation" class="text-center">
@@ -155,7 +150,7 @@
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            
+            <a class="category-link" href="/categories/前端/">前端</a>
         </span>
     
 
@@ -163,6 +158,8 @@
         <span class="fa-wrap">
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/模块化开发/">模块化开发</a>
                 
             </span>
         </span>
@@ -180,14 +177,13 @@
             
             
             <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>782</strong>天之前发表，文中内容可能已经过时。
+                本文于<strong>783</strong>天之前发表，文中内容可能已经过时。
             </p>
         
     </div>
     
     <div class="post-body post-content">
-        <p>##为什么要使用模块化</p>
-<ol>
+        <h2 id="为什么要使用模块化"><a href="#为什么要使用模块化" class="headerlink" title="为什么要使用模块化"></a>为什么要使用模块化</h2><ol>
 <li>全局变量、全局函数，容易造成变量名冲突</li>
 <li>页面引入了一堆的js文件，存在先后顺序的问题<ul>
 <li>代码由于组织混乱很容易出错</li>
@@ -201,29 +197,25 @@
 </ul>
 </li>
 </ol>
-<p>##模块化理解<br>模块化是一种组织代码的方式，当我们的项目越来越复杂的时候，如果把很多功能业务逻辑写在一起，就会造成开发起来十分的繁琐(因为经常会遇到变量命名冲突、文件依赖过于混乱的问题)，同时维护起来也十分的麻烦，这时候，我们可以考虑把代码按照功能等方面把整个项目划分成一个一个的模块，这样，当我们开发的时候，我们每次只需要关注这一小功能点是如何实现的，从而简化了开发的难度，这样可以提高我们开发的效率，同时，后期维护起来也会变得更加的简单。</p>
-<p>####cmd规范特性</p>
-<ul>
+<h2 id="模块化理解"><a href="#模块化理解" class="headerlink" title="模块化理解"></a>模块化理解</h2><p>模块化是一种组织代码的方式，当我们的项目越来越复杂的时候，如果把很多功能业务逻辑写在一起，就会造成开发起来十分的繁琐(因为经常会遇到变量命名冲突、文件依赖过于混乱的问题)，同时维护起来也十分的麻烦，这时候，我们可以考虑把代码按照功能等方面把整个项目划分成一个一个的模块，这样，当我们开发的时候，我们每次只需要关注这一小功能点是如何实现的，从而简化了开发的难度，这样可以提高我们开发的效率，同时，后期维护起来也会变得更加的简单。</p>
+<h4 id="cmd规范特性"><a href="#cmd规范特性" class="headerlink" title="cmd规范特性"></a>cmd规范特性</h4><ul>
 <li>一个模块就是一个单独的文件</li>
 <li>由于每个模块都是属于define关键字函数的回调函数被调用，每个模块都是一个单独的作用域</li>
 <li>预加载、懒执行（预加载就是预先把所有的模块全部加载完，懒执行就是需要执行哪块才执行哪块）</li>
 </ul>
-<p>####关键字</p>
-<ul>
+<h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h4><ul>
 <li>define    定义一个模块</li>
 <li>require    加载一个模块</li>
 <li>exports    暴露一个模块</li>
 <li>module    模块</li>
 </ul>
-<p>####注意点</p>
-<ul>
+<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><ul>
 <li>define(function(require,exports,module){});这里面的require,exports,module三个参数的名字是固定写法，不能简写，顺序不能错了 记忆方法：rem</li>
 <li>如果define里的参数想省略，只能从后面开始省略，只要写了后面的，前面的必须要写上 –&gt; 推荐写全，不要省</li>
 <li>如果一个模块既不需要公开成员变量，也不需要依赖第三方模块，那么可以全部省略</li>
 <li>seajs.use(“入口模块”)可以加回调函数，形式如：seajs.use(“入口模块”,callback);</li>
 </ul>
-<p>####路径问题</p>
-<ol>
+<h4 id="路径问题"><a href="#路径问题" class="headerlink" title="路径问题"></a>路径问题</h4><ol>
 <li><p>在sea.js当中，js/main和./js/main的含义不是一样的</p>
 <ul>
 <li>js/main代表的是在sea.js所在的文件为基准去找，所以找到的是 –&gt; SEAJS所在的父级文件夹/js/main.js 这样的话会找不到的(相对seajs包的路径)</li>
@@ -238,27 +230,64 @@
 </ul>
 </li>
 </ol>
-<p>##seajs使用</p>
-<p>####1. 引包<br>    <script src="js/sea.js"></script></p>
-<p>####2. 入口模块<br>    //为了简洁，路径最好不加.js<br>    //加载完成后触发回调函数<br>    //简化调用模块<br>    seajs.config({<br>    //base 设置路径<br>    //alias 设置模块的别名，简化调用<br>        base:”./js”<br>        alias:{<br>            m:”main”<br>        }<br>    })<br>    seajs.use(“./js/main”,function(){<br>      console.log(‘代码执行成功’);<br>    });</p>
-<p>####3. 主模块<br>    // 名字写全 并且顺序和单词都要写对（便于记住rem）<br>    define(function (require, exports, module) {<br>    // require 方法得到的就是指定的模块中向外暴露的接口对象     module.exports<br>    // var fooModule = require(‘./foo’)<br>    // console.log(fooModule.foo)<br>    var foo = require(‘./foo’)<br>        console.log(foo)<br>    });</p>
-<p>####4. 第三方模块<br>    define(function (require, exports, module) {<br>    // 每个文件模块都是一个模块作用域，外部是无法直接拿到的里面的东西的<br>    var foo = ‘bar’;<br>    // 默认情况下 module.exports 就是一个空对象<br>    // module.exports.foo = foo</p>
-<pre><code>module.exports = &apos;bar&apos;;
+<h2 id="seajs使用"><a href="#seajs使用" class="headerlink" title="seajs使用"></a>seajs使用</h2><h4 id="1-引包"><a href="#1-引包" class="headerlink" title="1. 引包"></a>1. 引包</h4><pre><code>&lt;script src=&quot;js/sea.js&quot;&gt;&lt;/script&gt;
+</code></pre><h4 id="2-入口模块"><a href="#2-入口模块" class="headerlink" title="2. 入口模块"></a>2. 入口模块</h4><pre><code>//为了简洁，路径最好不加.js
+//加载完成后触发回调函数
+//简化调用模块
+seajs.config({
+//base 设置路径
+//alias 设置模块的别名，简化调用
+    base:&quot;./js&quot;
+    alias:{    
+        m:&quot;main&quot;
+    }
+})
+seajs.use(&quot;./js/main&quot;,function(){ 
+  console.log(&apos;代码执行成功&apos;);
 });
-</code></pre><p>####sea.js把非cmd模块转换成cmd模块<br>        // 判断的左右就是防止jquery不作为cmd模块使用的时候也可以用<br>        if (typeof define === ‘function’ &amp;&amp; define.cmd) {<br>            define(function(require,exports,module){<br>                module.exports = jQuery;<br>            });<br>        }</p>
-<p>##require.js</p>
-<p>####引包<br>    //data-main引入主模块包<br>    <script src="js/lib/require.js" data-main="js/app/main"></script></p>
-<pre><code>//如果想用jQuery,则必须配置如下：
+</code></pre><h4 id="3-主模块"><a href="#3-主模块" class="headerlink" title="3. 主模块"></a>3. 主模块</h4><pre><code>// 名字写全 并且顺序和单词都要写对（便于记住rem）
+define(function (require, exports, module) {
+// require 方法得到的就是指定的模块中向外暴露的接口对象     module.exports
+// var fooModule = require(&apos;./foo&apos;)
+// console.log(fooModule.foo)
+var foo = require(&apos;./foo&apos;)
+    console.log(foo)
+});
+</code></pre><h4 id="4-第三方模块"><a href="#4-第三方模块" class="headerlink" title="4. 第三方模块"></a>4. 第三方模块</h4><pre><code>define(function (require, exports, module) {
+// 每个文件模块都是一个模块作用域，外部是无法直接拿到的里面的东西的
+var foo = &apos;bar&apos;;
+// 默认情况下 module.exports 就是一个空对象
+// module.exports.foo = foo
+
+module.exports = &apos;bar&apos;;
+});
+</code></pre><h4 id="sea-js把非cmd模块转换成cmd模块"><a href="#sea-js把非cmd模块转换成cmd模块" class="headerlink" title="sea.js把非cmd模块转换成cmd模块"></a>sea.js把非cmd模块转换成cmd模块</h4><pre><code>// 判断的左右就是防止jquery不作为cmd模块使用的时候也可以用
+if (typeof define === &apos;function&apos; &amp;&amp; define.cmd) {
+    define(function(require,exports,module){
+        module.exports = jQuery;
+    });
+}
+</code></pre><h2 id="require-js"><a href="#require-js" class="headerlink" title="require.js"></a>require.js</h2><h4 id="引包"><a href="#引包" class="headerlink" title="引包"></a>引包</h4><pre><code>//data-main引入主模块包
+&lt;script src=&quot;js/lib/require.js&quot; data-main=&quot;js/app/main&quot;&gt;&lt;/script&gt;
+
+
+//如果想用jQuery,则必须配置如下：
 require.config({
   baseUrl:&apos;./js/app/&apos;,//这里设置的是main的路径
   paths:{
     &quot;jquery&quot;:&quot;../lib/jquery&quot;
   }
 });
-</code></pre><p>####main<br>    //类似angular<br>    //[‘./cal’]映入第三方模块<br>    requirejs([‘./cal’],function(calculator){</p>
-<pre><code>});
-</code></pre><p>####第三方模块<br>    define(function(){<br>        //用return 提供接口暴露数据<br>        return<br>    });</p>
+</code></pre><h4 id="main"><a href="#main" class="headerlink" title="main"></a>main</h4><pre><code>//类似angular
+//[&apos;./cal&apos;]映入第三方模块
+requirejs([&apos;./cal&apos;],function(calculator){
 
+        });
+</code></pre><h4 id="第三方模块"><a href="#第三方模块" class="headerlink" title="第三方模块"></a>第三方模块</h4><pre><code>define(function(){
+    //用return 提供接口暴露数据
+    return 
+});
+</code></pre>
     </div>
     
     <div class="post-footer">
@@ -275,8 +304,13 @@ require.config({
 
 <div class="article-nav prev-next-wrap clearfix">
     
+        <a href="/2019/04/25/面向对象/面向对象第一天/" class="pre-post btn btn-default" title="javascript 面向对象：1">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">javascript 面向对象：1</span>
+        </a>
     
-        <a href="/2017/02/27/签看css3/" class="next-post btn btn-default" title>
+    
+        <a href="/2017/03/02/angular复习/" class="next-post btn btn-default" title>
             <span class="hidden-lg">下一篇</span>
             <span class="hidden-xs"></span><i class="fa fa-angle-right fa-fw"></i>
         </a>
@@ -287,26 +321,18 @@ require.config({
     <div id="comments">
         
 	
-    <div id="vcomments" class="valine"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="/assets/valine.min.js"></script>
-
-    <script>
-        new Valine({
-            av: AV,
-            el: '#vcomments',
-            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
-            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
-            placeholder: 'asdf',
-            notify: false,
-            verify: false,
-            avatar: 'mm',
-            meta: 'nick,mail'.split(','),
-            pageSize: '10',
-            path: window.location.pathname,
-            lang: 'null'.toLowerCase()
-        })
-    </script>
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
 
 
     </div>
@@ -321,7 +347,7 @@ require.config({
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要使用模块化"><span class="toc-text">为什么要使用模块化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模块化理解"><span class="toc-text">模块化理解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cmd规范特性"><span class="toc-text">cmd规范特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关键字"><span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意点"><span class="toc-text">注意点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#路径问题"><span class="toc-text">路径问题</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#seajs使用"><span class="toc-text">seajs使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-引包"><span class="toc-text">1. 引包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-入口模块"><span class="toc-text">2. 入口模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-主模块"><span class="toc-text">3. 主模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-第三方模块"><span class="toc-text">4. 第三方模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sea-js把非cmd模块转换成cmd模块"><span class="toc-text">sea.js把非cmd模块转换成cmd模块</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#require-js"><span class="toc-text">require.js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#引包"><span class="toc-text">引包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#main"><span class="toc-text">main</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三方模块"><span class="toc-text">第三方模块</span></a></li></ol></li>
         
     </div>
 </aside>

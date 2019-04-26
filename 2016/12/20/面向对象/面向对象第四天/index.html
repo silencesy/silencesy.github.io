@@ -1,0 +1,589 @@
+<!DOCTYPE HTML>
+<html lang="null">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Silence">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="面向对象">
+
+
+    <meta name="description" content="
+复习 加入我希望所有的函数都具有 inherit 功能
+function Person() {}
+
+var Student = Person.inherit( 成员 );
+// 生成函数 St...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>javascript 面向对象：4 | Silence</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="Silence">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> Rain </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Silence</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="javascript 面向对象：4">
+            
+	            javascript 面向对象：4
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/面向对象/">面向对象</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2016/12/20</span>
+        </span>
+        
+    
+</div>
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>856</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <ol>
+<li><p>复习<br> 加入我希望所有的函数都具有 inherit 功能</p>
+<pre><code>function Person() {}
+
+var Student = Person.inherit( 成员 );
+// 生成函数 Student, 但是 Student 里面的成员( this.XXX )
+// 由参数来提供, 而 Student 的对象, 继承自 Person 的对象
+</code></pre><p> 如果希望所有的函数都有 inherit 方法, 那么可以给 Function.prototype 添加该方法</p>
+</li>
+</ol>
+<ol>
+<li><p>代码的预解析<br> -&gt; 预解析</p>
+<pre><code>预
+解析
+
+提前的翻译解释, 在运行代码之前的一个解释.
+</code></pre><p> -&gt; 为什么需要它</p>
+<pre><code>-&gt; 编译型语言: C, C++, C#, Java
+    就是需要一个 &quot;翻译&quot; 程序, 将源代码翻译成计算机可以读懂的二进制数据( 指令 ).
+    然后存储成可执行文件. 
+
+    提前翻译好, 运行时直接执行得结果
+
+-&gt; 解释型( 脚本型 ): JavaScript, SQL, ...
+    代码在执行的时候, 有一个翻译程序, 读一句代码执行一句代码. 再读一句代码, 
+    再执行一句代码.
+
+    一句一句的翻译执行. 每次运行都需要翻译一次.
+
+-&gt; 代码在执行之前, 需要快速的 &quot;预览&quot; 一遍. 那么可以尽可能提高执行效率.
+</code></pre></li>
+<li><p>在 js 中预解析的特点<br> -&gt; 代码是如何执行的: 读取 js 文本, 预解析, 一句一句地执行<br> -&gt; js 在预解析的过程中完成了声明部分的标记与变量作用域的设定</p>
+</li>
+<li><p>什么是 js 中的声明<br> -&gt; 简单的说就是让 js 执行引擎知道有什么东西( 标识符 )</p>
+<pre><code>console.log( num );    // error: num is not defined
+num(); // error: is not function
+
+即代码在执行之前的预解析, 首先让 js 的执行引擎知道在当前运行环境中
+有什么东西( 名字, 标识符 )是可以被使用的. 它是变量, 还是函数等? 
+</code></pre><p> -&gt; 在 js 中有哪些声明: </p>
+<pre><code>1) 标识符的声明( 变量的声明 )
+2) 函数的声明
+</code></pre><p> -&gt; 变量的声明:</p>
+<pre><code>语法:         var 变量名;
+目的: 告诉解释器, 有一个名字是一个变量, 在当前环境中可以被使用.
+
+语句: 就是可以执行的东西.
+    var a = 123; 是一个语句
+在使用 var 声明变量, 同时完成赋值的时候. 实际上, 预解析将其做了一定处理:
+-&gt; 凡是读取到 var 的时候, 就检查 var 紧跟的名字是否已经标记了
+-&gt; 如果没有标记, 就表明这个名字是一个标识符, 需要被标记
+-&gt; 如果已经被标记了, 那么 这个 var 被忽略
+
+结论:
+    var a;
+    var a = 10;
+    等价
+    var a;
+    a = 10;
+
+    var a = 123;
+    var a = 456;
+    var a = 789;
+    等价于
+    var a = 123;
+    a = 456;
+    a = 789;
+
+如果在代码中有多个 var 后面紧跟的名字是一样的. 那么只有第一个 var 起作用.
+后面的所有 var 都会被自动的忽略.
+</code></pre><p> -&gt; 变量名提升</p>
+<p> -&gt; 函数的声明</p>
+<pre><code>-&gt; 函数的各种定义形式
+    -&gt; 声明式:    
+        function func () {
+            console.log( &apos;使用声明式定义&apos; );
+        }
+    -&gt; 表达式式( 匿名函数, 字面量函数, lambda 函数 ):
+        var func = function () {
+            console.log( &apos;使用表达式式定义&apos; );
+        };
+    -&gt; ... 
+-&gt; 特点:
+    1&gt; 函数的声明是独立于语句. 不需要加分号结束. 也不能嵌入到代码表达式中.
+    2&gt; 表达式式, 本质上是使用函数表达式( 字面量 )给变量赋值. 因此它是语句.
+
+-&gt; 表达式:
+    -&gt; 将运算符与操作数连接起来的式子.
+    -&gt; 就是一个有结果的代码单元( 不包括语句 )
+        var a;        // 声明, 不是语句, 也没有结果
+        123            // 字面量, 有值, 是表达式. 是常量表达式
+        a = 123        // 赋值, 有值, 就是被赋值的那个值. 是赋值表达式.
+
+        function () {}
+</code></pre></li>
+<li><p>如果将变量的声明与函数的声明放在一起有些需要注意的情况<br> 1) 函数的声明实际上包含两部分</p>
+<pre><code>1&gt; 告诉解释器 xxx 名字已经可以使用( 函数名, 标识符 )
+2&gt; 告诉解释, 这个名字代表着一个函数( 变量里存储着函数的引用 )
+</code></pre><p> 2) 当函数声明与变量声明冲突的时候. 只看谁先有数据.</p>
+</li>
+<li><p>一个在新版本的浏览器中的特性<br> if ( true ) {</p>
+<pre><code>function foo() {
+    console.log( true );
+}
+</code></pre><p> } else {</p>
+<pre><code>function foo() {
+    console.log( false );
+}
+</code></pre><p> }<br> foo();</p>
+</li>
+<li><p>词法作用域<br> -&gt; 作用域: 就是变量可以使用到不能使用的范围<br> -&gt; 块级作用域:</p>
+<pre><code>-&gt; 块: 代码块, 即 {  }
+-&gt; 变量的使用从定义开始, 到其所在的块级作用域结束
+    // js 伪代码
+    {
+        console.log( num );        // error: num 未定义
+        var num = 123;
+        {
+            console.log( num ); // =&gt; 123
+        }
+
+        console.log( num );     // =&gt; 123
+    }
+    console.log( num );  // error: num 未定义
+-&gt; 代表语言: C, C++, C#, Java, ...
+</code></pre><p> -&gt; js 是词法作用域</p>
+<pre><code>-&gt; 词法: 就是定义, 书写代码的规则.
+-&gt; 所以 所谓的 词法作用域, 就是 在书写代码的时候, 根据书写代码的结构
+    就可以确定数据的访问范围的作用域.
+-&gt; js 不受 块的影响, 即使在块中定义声明变量, 在块的外面依旧可以使用
+    console.log( num );  // =&gt; undefined
+    {
+        var num = 123;
+    }
+    console.log( num );  // =&gt; 123
+-&gt; 所谓的 js 的词法作用域, 就是根据预解析规则定义变量的使用范围, 全部代码中
+    只有函数可以限定范围. 其他均不能限定访问范围. 在内部是一个独立的作用范围结构.
+
+-&gt; 结论:
+    词法作用域就是描述变量的访问范围:
+    1&gt; 在代码中只有函数可以限定作用范围. 允许函数访问外部的变量. 反之不允许.
+    2&gt; 在函数内优先访问内部声明的变量, 如果没有才会访问外部的.
+    3&gt; 所有变量的访问规则, 按照预解析规则来访问
+</code></pre></li>
+<li><p>案例<br> var num = 123;<br> function f1 () {</p>
+<pre><code>console.log( num );
+</code></pre><p> }<br> function f2 () {</p>
+<pre><code>console.log( num );
+var num = 456;
+f1();
+console.log( num );
+</code></pre><p> }<br> f2();</p>
+<p> 1&gt; 读取代码预解析. 得到 num, f1, f2<br> 2&gt; 逐步的执行代码</p>
+<pre><code>1) 赋值 num = 123;   注意 f1 和 f2 由于是函数, 所以也有数据.
+2) 调用 f2.
+    进入到函数体内. 相当于做一次预解析. 得到 num. 注意, 此时有内外两个 num
+    执行每一句代码
+    -&gt; 打印 num. 因为函数内部有声明 num. 所以此时访问的是函数内部的 num. 未赋值, 得到 undefined
+    -&gt; 赋值 num = 456
+    -&gt; 调用 f1(). 调用函数的规则也是一样. 首先看当前环境中是否还有函数的声明. 如果有直接使用. 如果
+        没有, 则在函数外面找, 看时候有函数. 此时在函数 f2 中没有 f1 的声明. 故访问的就是外面的 f1 函数
+    -&gt; 跳入 f1 函数中. 又要解析一次. 没有得到任何声明.
+    -&gt; 执行打印 num. 当前环境没有声明 num. 故在外面找. 外面的是 123. 所以打印 123. 
+        函数调用结束, 回到 f2 中.
+    -&gt; 继续执行 f2, 打印 num. 在 f2 的环境中找 num. 打印 456.
+</code></pre></li>
+</ol>
+<pre><code>任务:
+    var num = 123;
+    function f1 () {
+        console.log( num );
+    }
+    function f2 () {
+        console.log( num );   // =&gt; 123 , 456, 456
+        num = 456;            
+        f1();
+        console.log( num );
+    }
+    f2();
+</code></pre><ol>
+<li><p>案例<br> (function ( a ) {</p>
+<pre><code>console.log( a );
+var a = 10;
+console.log( a );
+</code></pre><p> })( 100 );</p>
+<p> 拆解<br> ( 函数 ) ( 100 )<br> 第一个圆括号就是将函数变成表达式<br> 后面一个圆括号就是调用该函数</p>
+<p> var func = function ( a ) {</p>
+<pre><code>console.log( a );
+var a = 10;
+console.log( a );
+</code></pre><p> }<br> func( 100 );</p>
+<p> 注意: 函数定义参数, 实际上就是在函数最开始的时候, 有一个变量的声明<br> function ( a ) { … }<br> 其含义就是, 在已进入函数体, 在所有操作开始之前( 预解析之前 )就有了该变量的声明.</p>
+<p> 由于已经有了 a 参数的声明. 所以在代码中 var a = 10 是重复声明. 其声明无效.<br> 所以上面的代码, 等价于<br> var func = function ( a ) {</p>
+<pre><code>console.log( a );            // =&gt; 100
+a = 10;
+console.log( a );            // =&gt; 10
+</code></pre><p> }<br> func( 100 );</p>
+<p> // 变式</p>
+<p> (function ( a ) {</p>
+<pre><code>console.log( a );
+var a = 10;
+console.log( a );
+function a () {
+    console.log( a );
+}
+a();
+</code></pre><p> })( 100 );</p>
+<p> 1&gt; 直接调用<br> 2&gt; 进入到函数中, 已有声明 a 并且其值为 100<br> 3&gt; 在函数内部预解析. 得到 一个结论. 函数声明是两个步骤. </p>
+<pre><code>1) 让当前环境中, 有变量名 a 可以使用. 但是不需要. 因为已经有 a 的声明了
+2) 让 a 指向函数. 相当于
+    var a;
+    function a () {}
+    ...
+</code></pre><p> 4&gt; 开始逐步执行每一句代码</p>
+<pre><code>1) 打印 a. 所以打印函数体
+2) 赋值 a = 10
+3) 打印 a, 打印出 10
+4) 如果让 a 调用, 那么报错 error: a is not function
+</code></pre></li>
+<li><p>作用域链规则<br>-&gt; 什么是作用域链</p>
+<pre><code>链指的就是访问规则
+function foo() {
+    console.log( num );
+}
+
+--------------------
+function func () {
+    function foo() {
+        console.log( num );
+    }
+    foo();
+}
+
+--------------------
+function F () {
+    function func () {
+        function foo() {
+            console.log( num );
+        }
+        foo();
+    }
+    func();
+}
+... ...
+
+由于这种一环套一环的访问规则, 这样的作用域构成一个链式结构. 所以直接称其为作用域链.
+</code></pre><p>-&gt; 作用域链是用来做变量查找的. 因此变量可以存储什么东西. 链中就应该有什么东西. </p>
+<pre><code>换句话说就是, 链里面存储的是各种对象. 可以将其想象成对象的序列( 数组 )
+</code></pre></li>
+<li><p>绘制作用域链的规则<br>1&gt; 将所有的 script 标签作为一条链结构. 标记为 0 级别的链.<br>2&gt; 将全局范围内, 所有的声明变量名和声明函数名按照代码的顺序标注在 0 级链中.<br>3&gt; 由于每一个函数都可以构成一个新的作用域链. 所以每一个 0 级链上的函数都延展出 1 级链.<br>4&gt; 分别在每一个函数中进行上述操作. 将函数中的每一个名字标注在 1 级链中.<br>5&gt; 每一条 1 级链中如果有函数, 可以再次的延展出 2 级链. 以此类推.</p>
+</li>
+<li><p>分析代码的执行<br>当作用域链绘制完成后. 代码的的分析也需要一步一步的完成.<br>1&gt; 根据代码的执行顺序( 从上往下, 从左至右 )在图中标记每一步的变量数据的变化<br>2&gt; 如果需要访问某个变量. 直接在当前 n 级链上查找变量. 查找无序.<br>3&gt; 如果找到变量, 直接使用. 如果没有找到变量在 上一级, n - 1 级中查找.<br>4&gt; 一直找下去, 知直到 0 级链. 如果 0 级链还没有就报错. xxx is not defined.</p>
+</li>
+<li><p>经典面试题</p>
+</li>
+<li><p>经典面试题的变式( 练习 )<br>写一段代码, 生成 5 个 a 标签. 要求在 a 标签中分别显示出 1, 2, 3, 4, 5<br>即最后得到 <a>1</a><a>2</a><a>3</a><a>4</a><a>5</a></p>
+</li>
+<li><p>闭包的概念<br>-&gt; 字面意义</p>
+<pre><code>闭: 关闭, 封闭
+包: 包裹, 打包
+闭包的含义就是一个被包裹的隔离的空间.
+</code></pre><p>-&gt; 在 js 中, 什么是闭包</p>
+<pre><code>在 js 中函数是一个具有变量作用域隔离特性的一个内存结构, 即为一个闭包.
+
+function foo () {
+
+}
+</code></pre></li>
+<li><p>学习闭包, 在 js 中到底要解决什么问题<br>在 js 中闭包要解决的问题就是间接的访问到这个被隔离的数据.</p>
+<p>function foo () {</p>
+<pre><code>var num = 123;
+</code></pre><p>}</p>
+<p>// 在外界访问到 num 中的数据. 怎么做?</p>
+</li>
+</ol>
+<ol>
+<li><p>函数, 在 js 中与普通的对象具有一样的意义<br>-&gt; 函数可以像变量一样使用</p>
+<pre><code>-&gt; 赋值
+-&gt; 传递
+</code></pre></li>
+<li><p>闭包的间接访问<br>-&gt; 使用 return 数据不能直接访问原来的数据, 那么可以考虑利用函数的返回访问原始数据</p>
+<p>function foo () {</p>
+<pre><code>var num = 123;   // 原始数据
+
+function func () {
+    return num; // 它就是原始数据 num
+}
+
+return func;
+</code></pre><p>}</p>
+</li>
+</ol>
+<p>19，当函数声明语法嵌入表达式环境中，会自动进行转换，将转换成函数表达式。<br>    1）引用函数的规则还是使用变量赋值，所以外部可以使用该名字调用函数。<br>    2）函数表达式带有名字，该名字只允许在函数内部使用。属于局部作用域。<br>    3）带有名字的函数表达式，函数的name属性即为该名字。</p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2016/12/21/面向对象/面向对象第三天/" class="pre-post btn btn-default" title="javascript 面向对象：3">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">javascript 面向对象：3</span>
+        </a>
+    
+    
+        <a href="/2016/11/28/html5第二天/" class="next-post btn btn-default" title="html5基础二">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">html5基础二</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2016
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+</body>
+</html>

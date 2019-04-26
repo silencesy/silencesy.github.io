@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html lang="null">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Silence">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="html5">
+
+
+    <meta name="description" content="1,window.addEventListener
+2,onLine “L”大写的时候是一个属性，后面不用加括号，直接调用就行，返回一个布尔值。用法:alert（window.navigator...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>html5基础二 | Silence</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="Silence">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> Rain </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Silence</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="html5基础二">
+            
+	            html5基础二
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/html5/">html5</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2016/11/28</span>
+        </span>
+        
+    
+</div>
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>878</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>1,window.addEventListener</p>
+<p>2,onLine “L”大写的时候是一个属性，后面不用加括号，直接调用就行，返回一个布尔值。用法:alert（window.navigator.onLine）;返回浏览器是否联网（boolean值）<br>onlone “l”小写的时候是一件事件，这个事件只能用dom二级事件来绑定<br>“navigator”是window上的一个属性，所以写的时候window可以不写，但是建议写上（代码的完整性）<br>online事件在pc端的时候一定是从离线状态变到上线状态的时候才会触发。</p>
+<p>2,判断当前设备状态<br>2.1 监听设备在线<br>window.addEventListener(‘online’, function () {<br>            // alert(‘online’);<br>            $(‘.tips’).text(‘网络已连接’).fadeIn(500).delay(1000).fadeOut();<br>        });<br>delay(时间值)方法 ：是设置延迟时间。</p>
+<p>2.2 监听设备离线<br>window.addEventListener(‘offline’, function () {<br>            // alert(‘offline’);<br>            $(‘.tips’).text(‘网络已断开’).fadeIn(500).delay(1000).fadeOut();<br>        });</p>
+<p>3，html全屏 document.documentElement.webkitRequestFullScreen();</p>
+<p>任意元素全屏显示<br>node.webkitRequestFullScreen();（谷歌浏览器加webkit）<br>node.mozRequestFullScreen();（火狐加moz）<br>任意元素关闭全屏显示<br>Node.cancelFullScreen()（理论是这样关闭实际上是用document.webkitCancelFullScreen()关闭）</p>
+<p>兼容写法：                    function FullScreen(node){<br>            if (node.mozRequestFullScreen){<br>                node.mozRequestFullScreen();<br>            }<br>            else if(node.webkitRequestFullScreen){<br>                node.webkitRequestFullScreen();<br>            }else if(node.msRequestFullScreen){<br>                node.msRequestFullScreen();<br>            }else if(node.oRequestFullScreen){<br>                node.oRequestFullScreen();<br>            }<br>        }</p>
+<p>4，所有元素只能通过document才能调用关闭全屏<br>document.webkitCancelFullScreen();</p>
+<p>4,检测当前是否处于全屏<br>document.webkitIsFullScreen<br>(返回一个boolean值)</p>
+<p>5，webkit谷歌浏览器  moz火狐浏览器 msIE浏览器 o欧朋浏览器</p>
+<p>6，全屏伪类<br>        .box:-webkit-full-screen {<br>            background-color: blue;<br>        }（当box全屏的时候，box的背景变为蓝色）<br>:full-screen .box {}、:-webkit-full-screen {}、:moz-full-screen {}</p>
+<p>7，状态改变触发事件.change();</p>
+<p>8，base64码。</p>
+<p>9，拖拽事件：<br>在HTML5的规范中，我们可以通过为元素增加draggable=”true”来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启的。<br>页面中任何一个元素都可以成为目标元素，不需要特殊指定</p>
+<p>9.1、拖拽元素<br>dragstart事件 ：一定是点击加位移才会触发<br>dragend事件 ：一定是位移以后再松开鼠标才会触发<br>拖拽元素开始拖拽以后他的元素会变成光标，松开鼠标以后他会回到原点这段时间，元素会变成本身大小。<br>dragleave事件 ：一定是光标离开拖拽元素的时候才会触发。<br>drag事件 ：只要拖拽开始就一直在不停的触发，直到拖拽结束（期间不管光标是否移动，都会一直触发）</p>
+<p>9.2目标元素<br>dragenter事件 一定是光标进入目标元素的时候才触发<br>dragover事件 只要拖拽元素在目标元素内就会触发，无论光标是否移动<br>drop事件 在目标元素内松开鼠标才会触发，但是必须加上dragover事件并且清除dragover事件的默认行为。<br>dragleave事件 在拖拽元素离开目标元素的时候触发，但是一旦我们阻止了dragover事件的默认事件，就不会再松开后触发一个dragleave事件。</p>
+<p>11，由于HTML5中我们可以通过为表单元素添加multiple属性，因此我们通过<input>上传文件后得到的是一个FileList对象（伪数组形式）。</p>
+<p>12，</p>
+<p>if（navigator.userAgent.indexOf(“Chrome”) !== -1）{<br>    webkit<br>}else if（navigator.userAgent.indexOf(“Firefox”) !== -1）{<br>    moz<br>}</p>
+<p>13,navigator.userAgent获取那个版本。</p>
+<p>14，onchange事件 当调用者发生改变是触发。</p>
+<p>15，FileReader对象<br>HTML5新增内建对象，可以读取本地文件内容。</p>
+<p>var reader = new FileReader;</p>
+<p>实例方法：<br>readAsDataURL()  以DataURL形式读取文件<br>事件监听：onload事件<br>reader.onload = function () {<br>                document.querySelector(‘img’).src = this.result;<br>            }</p>
+<p>16，百度地图api使用<br>1、获取当前地理信息<br>navigator. geolocation.getCurrentPosition(successCallback, errorCallback, options)<br>2、重复获取当前地理信息<br>navigator. geolocation.watchPosition(successCallback, errorCallback, options)</p>
+<pre><code>function success(position) {
+    // alert(1);
+    console.log(position);
+}
+
+// 失败的回调
+function error(err) {
+    console.log(&apos;error&apos;);
+
+    console.log(err);
+}
+
+// 获得用户当前信息
+navigator.geolocation.getCurrentPosition(success, error, {
+    // enableHighAccuracy: true,
+    // timeout: 3000,
+    // maximumAge: 1000
+});
+</code></pre><p>position.coords.latitude纬度<br>position.coords.longitude经度<br>position.coords.accuracy精度<br>position.coords.altitude海拔高度</p>
+<p>17,history.pushState({},’’,’地址’);<br>            // 1、对象，在添加历史时，会设置一些数据，一般会设置null<br>            // 2、一般不生效，没意义<br>            // 3、我们要更改址址，并且会当一条新记录</p>
+<p>   history.replaceState({key:123},’’,’地址’);[这里添加的数据在后面onpopstate事件时可以读取和使用]<br>不会新生成网页记录,只是替换当前的地址.<br>            // 1、对象，在添加历史时，会设置一些数据，一般会设置null<br>            // 2、一般不生效，没意义<br>            // 3、我们要更改址址，并且会当一条新记录</p>
+<p>   onpopstate()事件 在历史区发生改变后并操作历史区的时候.(历史发生改变后,在操作前进或后退会触发)<br>要绑定给window   window.onpopstate = function(state){}为了获取数据加载在页面中<br>以后当我们访问一个网站的时候发现地址发生了改变,网页局部发生了改变,实现网页更新,那么他就用了window.onpopstate事件实现的功能.(主要应用于单页面应用)</p>
+<p>18，document.cookie  是一串字符串</p>
+<p>19，sessionStorage 同窗口多页面<br>1，是存储在本地的浏览器窗口里，而不是存在地址中<br>2，只要是同一个浏览器窗口，跨页面以后也能得到<br>3，关闭浏览器窗口以后会自动删除<br>4，如果我们换一个浏览器窗口打开就没有了</p>
+<p>20，localStorage<br>1，是存储在本地的浏览器中，不再是某一个窗口下，但是不能跨域（传输学医、域名、端口号只要有一个不一样）实现。<br>2，因为是存在浏览器的缓存中，所以关闭浏览器不会丢失数据<br>3，数据消失只能靠手动删除或者清除浏览器缓存</p>
+<p>方法：<br>window.localStorage.getItem()<br>（sessionStorage/LocalStorage）：setItem(“key”,”value”)–&gt;设置<br>（sessionStorage/LocalStorage）：getItem(“key”)–&gt;获取，返回value值<br>（sessionStorage/LocalStorage）：removeItem（”key”）–&gt;删除<br>（sessionStorage/LocalStorage）：clear()–&gt;清空<br>（sessionStorage/LocalStorage）：key(0)–&gt;按索引下标查找，返回的是”key”<br>window.localStorage.key(0);获取索引下标为0的值</p>
+<p>21,应用缓存:<br>想用应用缓存第一步需要加载进来<br>在<html manifest="./study.appcache"><br>manifest文件格式<br>1、顶行写CACHE MANIFEST<br>2、CACHE: 换行指定我们需要缓存的静态资源，如.css、image、js等<br>3、NETWORK: 换行指定需要在线访问的资源，可使用通配符<br>4、FALLBACK: 换行当被缓存的文件找不到时的备用资源</html></p>
+<p>CACHE MANIFEST</p>
+<p>#版本号 1.0.0</p>
+<p>CACHE:</p>
+<p>#此部分写需要缓存的资源 如.css、image、js等</p>
+<p>./images/img1.jpg<br>./images/img2.jpg<br>./images/img3.jpg<br>./images/img4.jpg<br>./images/img5.jpg</p>
+<p>NETWORK: </p>
+<p>#此部分要写需要有网络才可访问的资源，无网络刚不访问(更新最新的内容来代替之前缓存的内容)    （记得清缓存）</p>
+<p>#./js/main.js</p>
+<p>*代表所有</p>
+<p>FALLBACK:         回滚的意思</p>
+<p>#当访问不到某个资源的情况下，自动由另一个资源替换</p>
+<p>./css/online.css ./css/offline.css</p>
+<p>./online.html ./offline.html<br>当我们找不到源文件就使用备用文件</p>
+<p>应用缓存注意事项<br>1、CACHE: 可以省略，这种情况下将需要缓存的资源写在CACHE MANIFEST<br>2、可以指定多个CACHE: NETWORK: FALLBACK:，无顺序限制<br>3、#表示注释，只有当demo.appcache文件内容发生改变时或者手动清除缓存后，才会重新缓存。<br>4、chrome 可以通过chrome://appcache-internals/工具和离线（offline）模式来调试管理应用缓存</p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2016/12/20/面向对象/面向对象第四天/" class="pre-post btn btn-default" title="javascript 面向对象：4">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">javascript 面向对象：4</span>
+        </a>
+    
+    
+        <a href="/2016/11/28/HTML5总结/" class="next-post btn btn-default" title="html5基础">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">html5基础</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2016
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+</body>
+</html>

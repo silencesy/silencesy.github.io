@@ -16,10 +16,14 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content="undefined">
+    <meta name="keywords" content="html5">
 
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...">
+    <meta name="description" content="###1，严格模式strict.dtd。
+
+在js开头处加”use strict”;就成为严格模式
+
+###2，var fra = document.createDocumentFragment...">
 
 
 
@@ -31,7 +35,7 @@
     <!--Title-->
 
 
-<title>Hello World | Silence</title>
+<title>html5基础一 | Silence</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
@@ -112,11 +116,7 @@
                             </li>
                         
                             <li role="presentation" class="text-center">
-                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
                             </li>
                         
                             <li role="presentation" class="text-center">
@@ -136,16 +136,16 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Hello World">
+        <h1 id="html5基础一">
             
-	            Hello World
+	            html5基础一
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            
+            <a class="category-link" href="/categories/前端/">前端</a>
         </span>
     
 
@@ -153,6 +153,8 @@
         <span class="fa-wrap">
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/html5/">html5</a>
                 
             </span>
         </span>
@@ -162,7 +164,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2017/02/18</span>
+            <span class="date-meta">2017/02/23</span>
         </span>
         
     
@@ -170,22 +172,49 @@
             
             
             <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>796</strong>天之前发表，文中内容可能已经过时。
+                本文于<strong>791</strong>天之前发表，文中内容可能已经过时。
             </p>
         
     </div>
     
     <div class="post-body post-content">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>###1，严格模式strict.dtd。</p>
+<blockquote>
+<p>在js开头处加”use strict”;就成为严格模式</p>
+</blockquote>
+<p>###2，var fra = document.createDocumentFragment();创建文档碎片。</p>
+<blockquote>
+<p>document.body.appendchild(fra);</p>
+</blockquote>
+<p>###3，cc:ie6（ie专用注释）</p>
+<p>###4，自执行函数(function(){})();</p>
+<p>###5，itemscope(那个元素设置了这个属性，就把他当做一个整体)itemprop等</p>
+<p>6，guoxiang1991.github.io</p>
+<p>7，</p>
+<label for><br>    课程：<input type="text" list="course"><br><label><br><datalist id="course"><br>    <option value="php">php</option><br></datalist><br><br>8，广告页必须要小，就可以用到html5的dom操作。<br><br>9，html5表单：<br>9.1 fieldset 元素可将表单内的相关元素分组<br>9.2 legend标签为 <fieldset>、<figure> 以及 <details> 元素定义标题。<br>9.3 required 必填项。<br>9.4 multiple 属性规定输入域中可选择多个值。<br>9.5 autofocus 默认获取焦点。<br>9.6 placeholder 占位符。<br>9.7 pattern 自定义验证。<br>9.8 min 最大值。<br>9.9 max 最小值。<br>9.10 progress进度条<br>9.11 meter 度量器  使用范列     <label for><br>           入学成绩: <input type="number" max="100" id="score" min="0" step="1" value="0"><br>        </label><br>        <label for><br>            基础水平: <meter min="0" max="100" low="60" high="80" value="0" id="level"></meter><br>        </label><br>        var score = document.getElementById(“score”);<br>        var level = document.getElementById(“level”);<br>        score.oninput = function () {<br>            level.value=this.value;<br>        }<br>9.12 <label for><br>            所属学院: <input type="text" list="xueYuan" placeholder="前端与移动开发学院"><br>            <datalist id="xueYuan"><br>                <option value="前端"></option><br>                <option value="移动开发"></option><br>                <option value="Java"></option><br>            </datalist><br>        </label>
 
+<p>10，音乐添加</p>
+<audio src="路径"></audio>autopaly(自动播放 controls 是否显示默认播放控件  loop循环播放)<br>多浏览器支持方案<br><audio controls><br>    <source src"路径加不同格式的音乐"><br>    <source src"路径加不同格式的音乐"><br>    <source src"路径加不同格式的音乐"><br></audio>
+
+<p>11，视频添加</p>
+<p><video src="路径"></video><br>autoplay 自动播放<br>controls 是否显示默认播放控件<br>loop 循环播放<br>width 设置播放窗口宽度<br>height 设置播放窗口的高度（查询浏览器支持情况）<br>多浏览器支持的方案</p>
+<audio controls><br>    <source src"路径加不同格式的音乐"><br>    <source src"路径加不同格式的音乐"><br>    <source src"路径加不同格式的音乐"><br></audio>
+
+<p>12，语义化标签<br>header头部<br>container主体部分<br>article文章<br>aside侧旁栏<br>footer底部<br>section区块</p>
+<p>13，表单元素</p>
+<p><datalist>    数据列表</datalist></p>
+<p><keygen>    生成加密字符串</p>
+<p><output>    输出结果</output></p>
+<p><meter>    0度量器</meter></p>
+<p>14，兼容处理：在不支持HTML5新标签的浏览器里，会将这些新的标签解析成行内元素（inline）对待。所以我们只需要将其转换成块元素即可使用。但是在IE9版本以下，并不能正常解析这些新标签，但是却可以识别通过document.createElement(‘tagName’)创建的自定义标签，于是我们的解决方案就是将HTML5的新标签全部通过document.createElement(‘tagName’)来创建一遍，这样IE低版本也能正常解析HTML5新标签了，但在实际开发中我们更多采用的是通过检测IE浏览器的版本来加载第三方的一个JS库来解决兼容问题，这个库文件会帮自动通过document.createElement(‘tagName’)创建所有HTML5的新标签。</p>
+<p>15，微数据</p>
+<div itemscope itemtype="http://schema.org/Movie"><br>        <span itemprop="actor">刘德华</span><br>        <span itemprop="director" datatime="2012-02-06T22:30:30.50+08:00">2012年2月6日 22:30</span><br>        <!--<a href="" itemprop="url"></a>--><br>        <p itemprop="url"><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a></p><br>        <span itemprop="description">评论内容</span><br>    </div>
+
+
+<p><strong>dom</strong><br>1，document.querySelector(‘selector’)通过CSS选择器获取元素，符合匹配条件的第1个元素。</p>
+<p>2，document.querySelectorAll(‘selector’) 通过CSS选择器获取元素，以伪数组形式存在。</p>
+<p>3，类名操作<br>1、Node.classList.add(‘class’) 添加class<br>2、Node.classList.remove(‘class’) 移除class<br>3、Node.classList.toggle(‘class’) 切换class，有则移除，无则添加<br>4、Node.classList.contains(‘class’) 检测是否存在class<br>Node指一个有效的DOM节点，是一个通称。<br>5，自定义属性<br>假设某元素<div id="demo" data-name="itcast" data-age="10"><br>var demo = document.querySelector(‘#demo’);<br>1、读取 demo.dataset[‘name’]<br>2、设置demo.dataset[‘name’] = ‘web developer’</div></p>
+</details></figure></fieldset></label></label>
     </div>
     
     <div class="post-footer">
@@ -202,15 +231,15 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2017/02/18/git初识/" class="pre-post btn btn-default" title="git总结">
+        <a href="/2017/02/25/事件冒泡与捕获/" class="pre-post btn btn-default" title="事件冒泡和捕获">
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">git总结</span>
+            <span class="hidden-xs">事件冒泡和捕获</span>
         </a>
     
     
-        <a href="/2017/02/12/正则表达式/" class="next-post btn btn-default" title>
+        <a href="/2017/02/21/html5表单/" class="next-post btn btn-default" title="html5表单">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs"></span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">html5表单</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -219,26 +248,18 @@
     <div id="comments">
         
 	
-    <div id="vcomments" class="valine"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="/assets/valine.min.js"></script>
-
-    <script>
-        new Valine({
-            av: AV,
-            el: '#vcomments',
-            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
-            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
-            placeholder: 'asdf',
-            notify: false,
-            verify: false,
-            avatar: 'mm',
-            meta: 'nick,mail'.split(','),
-            pageSize: '10',
-            path: window.location.pathname,
-            lang: 'null'.toLowerCase()
-        })
-    </script>
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
 
 
     </div>
@@ -253,7 +274,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <p>暂无目录</p>
         
     </div>
 </aside>

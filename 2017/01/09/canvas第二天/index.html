@@ -1,0 +1,384 @@
+<!DOCTYPE HTML>
+<html lang="null">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Silence">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="canvas">
+
+
+    <meta name="description" content="1. 绘制折线图假设有点: ( 10, 20 ), ( 15, 13 ), ( 17, 30 ), ( 30, 10 ), ( 20, 15 )
+将这些点绘制到坐标轴中.
+2. 绘制形状-&gt...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>canvas基础二 | Silence</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="Silence">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> Rain </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Silence</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="canvas基础二">
+            
+	            canvas基础二
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/canvas/">canvas</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2017/01/09</span>
+        </span>
+        
+    
+</div>
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>836</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h4 id="1-绘制折线图"><a href="#1-绘制折线图" class="headerlink" title="1. 绘制折线图"></a>1. 绘制折线图</h4><pre><code>假设有点: ( 10, 20 ), ( 15, 13 ), ( 17, 30 ), ( 30, 10 ), ( 20, 15 )
+将这些点绘制到坐标轴中.
+</code></pre><h4 id="2-绘制形状"><a href="#2-绘制形状" class="headerlink" title="2. 绘制形状"></a>2. 绘制形状</h4><pre><code>-&gt; 矩形
+    ctx.rect( x, y, width, heigth )        描边, 需要 stroke 或 fill
+    ctx.strokeRect( x, y, w, h )
+    ctx.fillRect( x, y, w, h )
+    ctx.clearRect( x, y, w, h )         清除该矩形区域的内容
+
+-&gt; 清除整个画布
+    ctx.clearRect( 0, 0, cas.width, cas.height );
+
+    cas.width = cas.width;
+
+-&gt; 圆弧
+    ctx.arc( x, y, r, startAngle, endAngle, clockwise )
+    ctx.arcTo() 了解
+    参数:x,y圆心 r半径，startAngle起始弧度，endAngle结束弧度，clockwise画圆方向（顺时针或者你时针）
+-&gt; 圆
+    ctx.arc( x, y, r, 0, 2 * Math.PI )
+</code></pre><h4 id="3-弧度制"><a href="#3-弧度制" class="headerlink" title="3. 弧度制"></a>3. 弧度制</h4><pre><code>为了更好的计算角度, 我们该角度提供一个新的定义, 用 PI 作为单位
+将单位圆的一个整圈( 360 度 )记作 2 倍 的 PI.
+
+这样的度量表示就是弧度制的表示方法.
+
+60 度 PI / 3
+45 度 PI / 4
+30 度 PI / 6
+
+学会进行转换
+
+2 PI 刚好是一圈
+一圈又是 360 度
+
+2 PI 比上 360 度 = 弧度 比上 对应的角度
+
+angle 角度
+radian 弧度
+
+function toAngle ( radian ) {
+    return radian * 180 / Math.PI; 
+}
+function toRadian ( angle ) {
+    return angle * Math.PI / 180;
+}
+</code></pre><h4 id="4-角度的坐标"><a href="#4-角度的坐标" class="headerlink" title="4. 角度的坐标"></a>4. 角度的坐标</h4><pre><code>水平向右的角度是 0 度, 或 0 弧度
+顺时针是正方向, 逆时针是负方向
+
+练习: 绘制出, 圆心在 canva 正中心, 半径为 100, 角度从 -60度 到 120 度的圆弧
+</code></pre><h4 id="5-如果没有当前位置-绘制圆弧是没有任何问题"><a href="#5-如果没有当前位置-绘制圆弧是没有任何问题" class="headerlink" title="5. 如果没有当前位置, 绘制圆弧是没有任何问题"></a>5. 如果没有当前位置, 绘制圆弧是没有任何问题</h4><pre><code>但是如果有了当前位置, 绘制圆弧的时候会将当前位置连接到圆弧上
+</code></pre><h4 id="6-计算在圆弧上的点的坐标"><a href="#6-计算在圆弧上的点的坐标" class="headerlink" title="6. 计算在圆弧上的点的坐标"></a>6. 计算在圆弧上的点的坐标</h4><h4 id="7-根据固定到起始点到-圆心-结合圆弧和-closePath-方法可以绘制扇形-楔形-Wedge"><a href="#7-根据固定到起始点到-圆心-结合圆弧和-closePath-方法可以绘制扇形-楔形-Wedge" class="headerlink" title="7. 根据固定到起始点到 圆心, 结合圆弧和 closePath 方法可以绘制扇形( 楔形 Wedge)"></a>7. 根据固定到起始点到 圆心, 结合圆弧和 closePath 方法可以绘制扇形( 楔形 Wedge)</h4><h4 id="8-动态的通过动画-一点一点的添加角度-然后绘制一整个圆"><a href="#8-动态的通过动画-一点一点的添加角度-然后绘制一整个圆" class="headerlink" title="8. 动态的通过动画, 一点一点的添加角度, 然后绘制一整个圆"></a>8. 动态的通过动画, 一点一点的添加角度, 然后绘制一整个圆</h4><h4 id="9-绘制文字"><a href="#9-绘制文字" class="headerlink" title="9. 绘制文字"></a>9. 绘制文字</h4><pre><code>ctx.fillText( 文本内容, x, y )
+ctx.strokeText( 文本内容, x, y );
+
+常用的属性
+ctx.font = &apos;30px 黑体&apos;
+
+ctx.textAlign        left, center, right.    start, end
+ctx.textBaseline    top, middle, bottom.    hanging, ideographics, alphabetic
+
+ctx.measureText( 文本 )        获取当前文字的字体设置下, 文字的宽度对象
+</code></pre><ol>
+<li><p>绘制矩形的方法：<br> A.rect(x,y,width,height);//rect方法只是打草稿，必须配合stroke()或fill()方法来绘制图形<br> B.strokeRect(x,y,width,height);//绘制空心矩形<br> C.fillRect(x,y,width,height);//绘制填充矩形。</p>
+</li>
+<li><p>清除矩形区域：<br> //擦除从x,y坐标开始的矩形区域，这个区域的大小由width，height来决定<br> ctx.clearRect(x,y,width,height);</p>
+</li>
+<li><p>清除整个画布的内容：<br> A.  ctx.clearRect(0,0,canvas.width,canvas.height);<br> B.  canvas.width = canvas.width;</p>
+</li>
+<li><p>绘制圆弧的方法：<br> A.<br> ctx.arc( 圆心坐标x,圆心坐标y, 圆弧的半径，圆弧开始的弧度,圆弧结束的弧度,圆绘制的方向 );<br> ctx.arc(100,100,50,0,2*Math.PI,true);</p>
+<p> ctx.stroke();</p>
+<p> B.<br> ctx.moveTo(x0,y0);<br> ctx.arcTo(x1,y1,x2,y2,半径);<br> //从x0,y0的点拉一条线到x1,y1  再从x1,y1拉一条线到x2,y2.<br> //以半径绘制两条线的相切圆。</p>
+</li>
+</ol>
+<ol>
+<li><p>弧度制：为了能够更好的表示的角度，<br>如果是360度就记做  2*PI</p>
+</li>
+<li><p>圆弧的0度角在圆心水平向右。<br>0度角顺时针是角度的正方向<br>0独角逆时针是角度的逆方向</p>
+</li>
+<li><p>当我们绘制圆弧的时候，有一个特性：<br> 会将圆弧的起始点和moveTo的定点连接起来</p>
+</li>
+<li><p>计算圆弧上坐标点的公式：<br> x = 圆心坐标x + 半径 <em> Math.cos(   toRadian(角度));<br> y = 圆心坐标y + 半径 </em> Math.sin(   toRadian(角度));</p>
+</li>
+<li><p>绘制扇形的步骤：<br> A.moveTo到圆心<br> B.绘制圆弧<br> C.ctx.closePath()</p>
+</li>
+</ol>
+<ol>
+<li>数据饼形图：</li>
+</ol>
+<ol>
+<li>绘制文本的方法：<br>A.ctx.fillText(文本字符串,x,y);<br>B.ctx.strokeText(文本字符串,x,y);</li>
+</ol>
+<p>注意：绘制的文本字符串会绘制在x,y坐标处，文字内容左下角对齐x,y坐标点。</p>
+<p>设置绘制文字的尺寸：<br>    ctx.font = “30px 黑体”;<br>设置绘制文字的水平对齐：<br>    ctx.textAlign = ‘left’;//left,center,right<br>设置绘制文字的垂直对齐：<br>    ctx.textBaseline = “top”;//top,middle,bottom</p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/01/09/canvas第三天/" class="pre-post btn btn-default" title="canvas基础三">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">canvas基础三</span>
+        </a>
+    
+    
+        <a href="/2017/01/06/canvas第一天/" class="next-post btn btn-default" title="canvas基础一">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">canvas基础一</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-绘制折线图"><span class="toc-text">1. 绘制折线图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-绘制形状"><span class="toc-text">2. 绘制形状</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-弧度制"><span class="toc-text">3. 弧度制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-角度的坐标"><span class="toc-text">4. 角度的坐标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-如果没有当前位置-绘制圆弧是没有任何问题"><span class="toc-text">5. 如果没有当前位置, 绘制圆弧是没有任何问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-计算在圆弧上的点的坐标"><span class="toc-text">6. 计算在圆弧上的点的坐标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-根据固定到起始点到-圆心-结合圆弧和-closePath-方法可以绘制扇形-楔形-Wedge"><span class="toc-text">7. 根据固定到起始点到 圆心, 结合圆弧和 closePath 方法可以绘制扇形( 楔形 Wedge)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-动态的通过动画-一点一点的添加角度-然后绘制一整个圆"><span class="toc-text">8. 动态的通过动画, 一点一点的添加角度, 然后绘制一整个圆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-绘制文字"><span class="toc-text">9. 绘制文字</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2016
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+</body>
+</html>

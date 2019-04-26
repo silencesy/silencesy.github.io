@@ -1,0 +1,434 @@
+<!DOCTYPE HTML>
+<html lang="null">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Silence">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="css">
+
+
+    <meta name="description" content="如何使用手册学会使用工具，可以让我们事半功倍。
+[]表示全部可选项
+||表示或者
+|表示多选一
+？表示0个或者1个
+*表示0个或者多个
+{}表示范围一、选择器
+属性选择器：–ele[attr] ...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>css3 知识汇总 | Silence</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="Silence">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> Rain </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Silence</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="css3 知识汇总">
+            
+	            css3 知识汇总
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/css/">css</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2017/02/27</span>
+        </span>
+        
+    
+</div>
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>787</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h3 id="如何使用手册"><a href="#如何使用手册" class="headerlink" title="如何使用手册"></a>如何使用手册</h3><h4 id="学会使用工具，可以让我们事半功倍。"><a href="#学会使用工具，可以让我们事半功倍。" class="headerlink" title="学会使用工具，可以让我们事半功倍。"></a>学会使用工具，可以让我们事半功倍。</h4><ol>
+<li>[]表示全部可选项</li>
+<li>||表示或者</li>
+<li>|表示多选一</li>
+<li>？表示0个或者1个</li>
+<li>*表示0个或者多个</li>
+<li>{}表示范围<h3 id="一、选择器"><a href="#一、选择器" class="headerlink" title="一、选择器"></a>一、选择器</h3><ol>
+<li>属性选择器：<br>–ele[attr]  选取包含这个属性的元素<br>–ele[attr=value]  选取这个attr属性有且只有value这一个值的元素<br>–ele[attr^=value]  选取这个attr属性中以value字符开头的元素<br>–ele[attr$=value]  选取这个attr属性中以value字符结尾的元素<br>–ele[attr*=value]  选取这个attr属性中以包含value字符的元素<br>–ele[attr~=value]  选取这个attr属性中有value这个属性值的元素</li>
+<li>伪类选择器：<br>–ele:first-child  选取当前元素的父级下的第一个子元素<br>–ele:last-child  选取当前元素的父级下的最后一个子元素<br>–ele:nth-child(xn+y)  选取当前元素的父级下的第xn+y个子元素<br>–ele:nth-last-child(xn+y)  选取当前元素的父级下的倒数第xn+y个子元素<br>–ele:empty  选取当前元素下没有任何子元素或文本的元素（注释不算，但是空格算 通常用在购物车计数）<br>–ele:not(.class)  选取的是除了这个元素之外的元素<br>–ele:target  处在锚点状态下的元素（也就是当前元素被锚点状态）<br>–ele:checked  选取的是当前处在checked状态下的元素（用于input标签中的单选和复选框）<br>–ele:enabled  选取的是当前处在enabled状态下的元素（用于按钮）<br>–ele:disabled  选取的是当前处在disabled状态下的元素（用于按钮）</li>
+<li>伪元素选择器：<br>–ele:before/ele::before  在当前元素下添加一个before伪元素处在当前元素下最开始的位置<br>–ele:after/ele::after  在当前元素下添加一个after伪元素处在当前元素下最末尾的位置<br>  element::before/element::after {<pre><code>content:&apos;&apos;; 这里可以填内容  通常为空(如果设置文本内容,则会在该伪元素上显示文本内容)
+display:block;  新建的伪元素是一个行内元素,在使用的时候通常转换为块级元素,但是不一定要转换(也可以通过定位或者浮动来改变成块级元素)
+width:;
+height:;
+...
+</code></pre>  }</li>
+</ol>
+</li>
+</ol>
+<pre><code>--ele::first-letter  当前文本的首字母（也可以是第一个字）
+--ele::first-line  当前文本的第一行（是相对的）
+--ele::selection  设置选中区域的样式(可以设置字体颜色和背景颜色等,但是不可以改变字体大小)
+--input::-webkit-input-placeholder{}选中input里的placeholder并设置样式
+注意:伪元素选择器前面的两个点最好写成一个,以为现在的浏览器默认会添加成两个.
+4. 小技巧
+-webkit-user-select:none;当前元素下的文字不可选中
+</code></pre><h3 id="二、颜色"><a href="#二、颜色" class="headerlink" title="二、颜色"></a>二、颜色</h3><ol>
+<li>color属性可以赋什么值<br>– red  直接写代表颜色的英文单词<br>– #CCCCCC  16进制表示方法<br>– rgb(0,0,0) 三个参数值分别是0-255，0-255，0-255<br>– rgba(0,0,0,0) 四个参数值分别是0-255，0-255，0-255,0-1最后一个参数表示透明度，不会被其子盒子继承<br>– hsl(0,0%,0%) 三个参数值分别是0-360，0%-100%，0%-100%<br>– hsla(0,0%,0%,0) 四个参数值分别是 色调0-360,饱和度0%-100%(但这个参数为0的时候,必须为0%才不会出错)，亮度0%-100%,0-1最后一个参数表示透明度，不会被其子盒</li>
+</ol>
+<p>子继承</p>
+<pre><code>-- transparent 完全透明的意思，不可以调节透明度
+</code></pre><ol>
+<li>opacity  表示透明度的意思，取值为0-1之间的数字，会被子盒子继承</li>
+</ol>
+<h3 id="三、文字阴影"><a href="#三、文字阴影" class="headerlink" title="三、文字阴影"></a>三、文字阴影</h3><ol>
+<li>text-shadow: 0px 0px 0px red  文字阴影<br>– 第一个参数表示阴影左右移动的距离（正值向右，负值向左）<br>– 第二个参数表示阴影上下移动的距离（正值向下，负值向上）<br>– 第三个参数表示阴影的模糊度，不能为负值，数值越大阴影越模糊<br>– 第四个参数表示阴影颜色<br>(后面可以在用逗号,在添加一个文字阴影.)<h3 id="四、边框"><a href="#四、边框" class="headerlink" title="四、边框"></a>四、边框</h3></li>
+<li>border-radius: 0px 0px 0px 0px / 0px 0px 0px 0px  边框圆角（可以是正圆角也可以是椭圆角，当X/Y轴半径不一样的时候即为椭圆角，如果X/Y轴半径一样，那么“/”后</li>
+</ol>
+<p>面的值可以省略不写）<br>    – 0 0 0 0 / 0 0 0 0;  标准写法  分别表示1、2、3、4 位置的X/Y轴半径<br>    – 0 0 0 / 0 0 0; 简写  分别表示 1、2/4、3 位置的X/Y轴半径<br>    – 0 0 / 0 0; 简写  分别表示 1/3、2/4 位置的X/Y轴半径<br>    – 0 / 0; 简写  表示四个位置的X/Y轴半径</p>
+<ol>
+<li>box-shadow: 0px 0px 0px red  盒子阴影<br>– 第一个参数表示阴影左右移动的距离（正值向右，负值向左）<br>– 第二个参数表示阴影上下移动的距离（正值向下，负值向上）<br>– 第三个参数表示阴影的模糊度，不能为负值，数值越大阴影越模糊<br>– 第四个参数表示阴影颜色</li>
+<li>border-image: url(“”) 27 stretch repeat  边框背景图片（复合属性，也可以拆开写）<br>– 第一个参数表示边框背景图片的引入地址<br>– 第二个参数表示引入的图片中以什么样的尺寸来分割成九份<br>– 第三个参数表示X轴方向的填充方式（round，repeat，stretch）<br>– 第四个参数表示Y轴方向的填充方式（round，repeat，stretch）<br>– border-image-source: url(“”);<br>– border-image-slice: 27 27 27 27 fill;（背景图片裁切尺寸，最后的fill是表示中间内容区域也显示为图片的中间区域，如果不写默认为中间内容区域留白）<br>– border-image-repeat: stretch repeat round;<br>– border-image-width: 20px;<br>– border-image-outside:1/0px;虚拟变大,只是占以前的大小,不会影响旁边的元素 .设置的值有两种, 数字代表扩大自己的倍数 ,具体的像素.<br>说明:  stretch拉伸  repeat平铺(两边会被裁剪)   round显示全部浏览器自动调整</li>
+</ol>
+<h3 id="五、盒模型"><a href="#五、盒模型" class="headerlink" title="五、盒模型"></a>五、盒模型</h3><ol>
+<li>box-sizing:border-box （以边框方式计算盒子的大小）<br>– border-box  设置为border-box以后，我们设置的盒子（width/height）即为content+padding+border<br>– content-box  设置为border-box以后，我们设置的盒子（width/height）即为content（默认）<br>说明:  默认的box-sizing:content-box;优先保证内容的大小  对盒子进行缩放. box-sizing:border-box;让盒子优先保证自己所占域的大小,对内容进行压缩.<h3 id="六、背景"><a href="#六、背景" class="headerlink" title="六、背景"></a>六、背景</h3></li>
+<li>background-size: 10px 10px  背景图片的尺寸大小（也可以设置为contain、cover）<br>–contain  图片两边等比例拉伸，直到某一边顶格停止拉伸（长边位置顶格后，短边位置不再拉伸，其余位置留白）<br>–cover  图片等比例拉伸，保证两边都顶格，可能会出去（短边位置顶格，长边位置溢出盒子）</li>
+<li>background-position: 10px 10px/top left  背景图片定位</li>
+<li>background-origin:  背景图片的开始位置<br>–border-box  让图片背景在border开始的位置开始显示<br>–padding-box  让图片背景在padding开始的位置开始显示（默认）<br>–content-box  让图片背景在content开始的位置开始显示</li>
+<li>background-clip:<br>–content-box  内容区域以外的背景图片全部裁切掉（不是图片缩小或移动位置，而是直接裁切）<br>–padding-box  padding区域以外的背景图片全部裁切掉（不是图片缩小或移动位置，而是直接裁切）</li>
+<li>background-image<br>–background-image:url(“”),url(“”),…,…;  多张背景图片以逗号分隔可以引入多张背景图片<br>–background-position:top left,top left;当设置了多重背景时要设置背景位置时也用逗号隔开设置,其位置时一一对性的.</li>
+</ol>
+<h3 id="七、渐变"><a href="#七、渐变" class="headerlink" title="七、渐变"></a>七、渐变</h3><ol>
+<li>linear-gradient()  线性渐变<br>–第一个参数表示线性渐变的方向（to top/right/bottom/left，也可以是具体的角度360deg）<br>–第二个参数表示从什么颜色开始（也可以在颜色后面加上百分比 yellow 25%）<br>–第三个参数表示向什么颜色渐变（根据上一个百分比来决定从多少到多少,为什么颜色）<br>–第四个参数表示向什么颜色渐变（从第四个开始可以写可以不写）<br>–……</li>
+<li>radial-gradient()  径向渐变<br>–第一个参数表示径向渐变的范围（为半径值）<br>–第二个参数表示径向渐变的开始位置（at 渐变开始的位置，也可以是具体的值）<br>–第二个参数表示从什么颜色开始（也可以在颜色后面加上百分比 yellow 25%）<br>–第三个参数表示向什么颜色渐变（根据上一个百分比来决定从多少到多少为什么颜色）<br>–第四个参数表示向什么颜色渐变（从第四个开始可以写可以不写）<br>–……</li>
+<li><a href="http://www.colorzilla.com/gradient-editor/" target="_blank" rel="noopener">http://www.colorzilla.com/gradient-editor/</a>  自动生成全兼容渐变代码<br>具体说明:  <h4 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h4><ol>
+<li>线性渐变<br>background-image:linear-gradient(to right,yellow,green);黄色从左到右渐变为绿色<br>方向还可以用度数但是要带单位deg 0deg向上 90deg向右<br>background:linear-gradient(90deg,yellow 25%,green);开始%25是黄色不开始渐变,过了%25之后才开始渐变(这个百分比相当于       整个盒子)background:linear-</li>
+</ol>
+</li>
+</ol>
+<p>gradient(90deg,yellow 25%,green 50%);<br>       还可以个多个值:例如  background:linear-gradient(90deg,yellow 25%,green 25%m,pink 50%);<br>       方向 颜色 范围</p>
+<ol>
+<li>径向渐变<br> 有原点(圆心) 两种颜色<br> background-image:radial=gradient(120px at center center,yellow,green);<br> 第一个参数是半径  后面两个是坐标 左后是颜色<br> background-image:radial=gradient(120px 80px at center center,yellow,green);<br> 写了两个半径就是椭圆  后面坐标可以用单词 给百分比 和具体的数值<br> background-image:radial=gradient(120px 80px at center center,yellow,green 25%,blue);和线性渐变基本一样<br>总结注意:要想不要渐变的效果就这样设置background:linear-gradient(90deg,yellow 25%,green %25,green 50%) ;<h3 id="八、过渡动画"><a href="#八、过渡动画" class="headerlink" title="八、过渡动画"></a>八、过渡动画</h3><ol>
+<li>transition: all 1s 1s ease  过渡动画（从其实状态到结束状态的改变，只能是两个这状态的改变）<br>–后面参数的书写顺序没有具体规定，不过出现的第一个时间一定是过渡需要的时间，第二个才是延迟时间<br>–一般大家默认写成（属性、过渡时间、延迟时间、线性）<br>–第一个参数为transition-property  是我们需要的过渡的属性（可以是单一的某一个，如果全部都过渡就写all）<br>–第二个参数为transition-duration  是完成本次过渡动画的总时间<br>–第三个参数为transition-delay  是本次动画开始是的延迟时间<br>–第四个参数为transition-timing-function  是本次动画的动画线性（默认为ease）</li>
+<li><a href="http://cubic-bezier.com/#.17,.67,.83,.67" target="_blank" rel="noopener">http://cubic-bezier.com/#.17,.67,.83,.67</a>  生成过渡线性（贝塞尔曲线）<br>说明:动画线性的其他值<br>linear： 线性过渡。等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0)<br>ease： 平滑过渡。等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0)<br>ease-in： 由慢到快。等同于贝塞尔曲线(0.42, 0, 1.0, 1.0)<br>ease-out： 由快到慢。等同于贝塞尔曲线(0, 0, 0.58, 1.0)<br>ease-in-out： 由慢到快再到慢。等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)<br>这里注意如果transition: all 1s 1s ease加在element:hover触发的时候就只会执行一次动画   加在element的时候会执行两次动画</li>
+</ol>
+</li>
+</ol>
+<h3 id="九、2D转换"><a href="#九、2D转换" class="headerlink" title="九、2D转换"></a>九、2D转换</h3><p>  所有2D转换都是transform属性，只不过后面的值不一样</p>
+<ol>
+<li>transform: translate  2D转换中的位移<br>–translateX(20px) 向X轴正方向移动20px<br>–translateY(20px) 向Y轴正方向移动20px</li>
+<li>transform: scale  2D转换中的缩放<br>–scaleX(1) 延X缩放1倍（1为没有缩放，大于1就是放大，小于1就是缩小，不可为负值，没有单位）<br>–scaleY(1) 延Y缩放1倍（1为没有缩放，大于1就是放大，小于1就是缩小，不可为负值，没有单位）</li>
+<li>transform: rotate  2D转换中的旋转<br>–rotate(360deg)  旋转一定的角度（即在Z轴上旋转，正值为顺时针，负值为逆时针）注意:transform-origin:top right;绕具体位置旋转(值可以为坐标单词和具体的像素值)</li>
+<li>transform: skew  2D转换中的倾斜（扭曲）<br>–skewX(360deg)  顺着X轴进行倾斜（不常用）<br>–skewY(360deg)  顺着Y轴进行倾斜（不常用）<br>注意:transform:translatex(x);<pre><code> transform:translatex(y);
+上面这样写法,后面会覆盖前面的,当两个都要写的时候就这样写transform:translatex(x) translatex(y);
+</code></pre></li>
+</ol>
+<h3 id="十、3D转换"><a href="#十、3D转换" class="headerlink" title="十、3D转换"></a>十、3D转换</h3><ol>
+<li>transform: translate 3D转换中的位移<br>–translateX(20px) 向X轴正方向移动20px<br>–translateY(20px) 向Y轴正方向移动20px<br>–translateZ(20px) 向Z轴正方向移动20px</li>
+<li>transform: rotate  2D转换中的旋转<br>–rotateX(360deg)  旋转一定的角度（延X轴进行一定的角度旋转）<br>–rotateY(360deg)  旋转一定的角度（延Y轴进行一定的角度旋转）<br>–rotateZ(360deg)  旋转一定的角度 ( 延Z轴进行一定的角度旋转 )<pre><code>注意:transform:rotate3d(1,1,1,45deg)前面三个一 正的正着转 负的反着转
+</code></pre></li>
+<li>transform-origin: left bottom  改变旋转轴的位置<br> 第一个参数可以为 top bottom left right<br> 第一个参数可以为 top bottom left right<br> 这里的参数还可以设置像素值</li>
+<li>transform-style: preserve-3d  设置在父级盒子上，让其子元素在3D效果下</li>
+<li><p>perspective: 600px  进行600px距离的透视效果，距离越大效果越不明显</p>
+<p>注意:我们可以同时使用多个转换，其格式为：transform: translate() rotate() scale() …等，其顺序会影转换的效果。</p>
+<pre><code>当在设置动画的时候如果元素本身设置了transform的属性时 如translate() rotate();
+那么在hover的时候要与元素本身的transform属性一一对应顺序才能正确的显示
+</code></pre><p> 具体例子<br>如:.rocket {</p>
+<pre><code>height: 190px;
+width: 100px;
+position: absolute;
+bottom: 0;
+transform:  translate(0, 0) rotate(30deg)  ;
+transition: transform 1s;
+</code></pre><p>   }<br>   section:hover .rocket{</p>
+<pre><code>transform:translate(1000px, -500px) rotate(900deg) ;
+</code></pre><p>   }</p>
+</li>
+</ol>
+<h3 id="十一、帧动画"><a href="#十一、帧动画" class="headerlink" title="十一、帧动画"></a>十一、帧动画</h3><ol>
+<li>@keyframes 名字{}  是指动画的定义阶段，里面会写明动画在各个阶段会变换成什么样子<br>–{<br>  from{<pre><code>    from中如果不设置,默认使用的是,初始状态
+}
+</code></pre>  to{<pre><code>    to中设置的是结束时的状态
+}
+</code></pre>}<br>–{<br>  0%{<pre><code>0%中如果不设置,默认使用的是,初始状态
+</code></pre>   }<br>  50%{<pre><code>50%中设置的是动画中50%帧位置时的动画，当然也可以写的更加细致
+</code></pre>   }<br>  100%{<pre><code>100%中设置的是结束时的状态
+</code></pre>   }<br>}</li>
+<li>animation-name: 名称; 与我们定义动画的时候名字配套，是指我们本次动画使用我们定义的哪一个动画</li>
+<li>animation-duration: 2s; 持续时间，是指我们的本次动画要多少时间完成</li>
+<li>animation-delay: 2s; 延迟时间，是指我们的本次动画在最开始的时候延迟多少时间后开始</li>
+<li>animation-iteration-count: infinite;  执行次数，是指本次动画执行多少次，infinite为无限</li>
+<li>animation-timing-function: linear;  是指动画执行的线性(step(5)分布执行)</li>
+<li>animation-fill-mode: forwards;  是指动画结束时的状态<br>–backwards：动画开始状态是从动画的第一帧开始而不是原始状态开始，动画结束后回到最原始状态<br>–forwards：动画从最原始状态开始，而不是第一帧，动画结束后就留在最后的状态<br>–both：动画开始状态是从动画的第一帧开始而不是原始状态开始，动画结束后就留在最后的状态</li>
+<li>animation-direction: normal; 是指动画执行的顺序，在多次执行动画时设置<br>–normal 是指每次动画都是正向执行<br>–reverse 是指每次动画都是反向执行<br>–alternate 是指多次动画时以正向开始，并以（正、反、正…）的顺序执行下去<br>–alternate-reverse 是指多次动画时以反向开始，并以（反、正、反…）的顺序执行下去</li>
+<li>animation-play-state: running; 是指动画的暂停与播放<br>–running 是指动画播放<br>–paused 是指动画暂停<br>(用js暂停动画dom.style.animationPlayState=’paused’;)</li>
+<li>连写习惯:名称 持续时间 线性 次数 顺序 结束状态 运动和暂停<br>连写注意:    复合写法<pre><code>1属性的顺序是可以随意调换的
+2第一次出现的时间是动画持续时间
+3第二个出现的时间是延迟时间
+4如果只设置一个时间 默认就是动画持续事件
+</code></pre><h3 id="十二、flex弹性盒子"><a href="#十二、flex弹性盒子" class="headerlink" title="十二、flex弹性盒子"></a>十二、flex弹性盒子</h3></li>
+<li>display: flex 设置在父级盒子上，表示开启弹性布局，开启后其子元素会拥有一个主轴，一个侧轴，主轴默认是X轴方向是从左向右，侧轴垂直于主轴，默认方向是从上向下</li>
+<li>justify-content: flex-start;  设置在父级盒子上，表示主轴方向上的分布排列<br>–flex-start 这是默认值，是从开始位向结束位依次排列<br>–flex-end 是从结束位向开始位依次排列<br>–center 是居中显示<br>–space-between 是从开始位向结束位依次排列，左右顶格，所有元素中间的间隙相等<br>–space-around 是从开始位向结束位依次排列，左右不顶格，最左则元素的左边间隙和最右边元素的右边间隙相等，所有元素中间的间隙为左右两侧的二倍<br>说明:space-between  左右靠边,中间间歇相等排布,父盒子的宽度减去所有子盒子的宽度除以(盒子-1)让左右盒子的靠边,其他盒子中间就插上刚刚所算出来的值<pre><code>space-around左右间歇相等 父盒子的宽度减去所有自盒子的宽度再除以所有盒子*加在每个盒子的两侧
+</code></pre></li>
+<li>align-items: stretch;  设置在父级盒子上，表示对侧轴方向上的分布排列，这是在只有一行的时候使用<br>–stretch 表示其下的子盒子会在侧轴上进行拉伸至上下顶格，会和我们元素本身的宽和高有冲突<br>–flex-start 排在开始位<br>–flex-end 排在结束位<br>–center 是居中显示</li>
+<li>align-content: flex-start; 设置在父级盒子上，表示对侧轴方向上的分布排列，这是在多行的时候使用(注意当只有一行的时候无法生效)<br>–flex-start 是从开始位向结束位依次排列<br>–flex-end 是从结束位向开始位依次排列<br>–center 是居中显示<br>–space-between 是从开始位向结束位依次排列，左右顶格，所有元素中间的间隙相等<br>–space-around 是从开始位向结束位依次排列，左右不顶格，最左则元素的左边间隙和最右边元素的右边间隙相等，所有元素中间的间隙为左右两侧的二倍</li>
+<li>flex-direction: row;  改变主轴的方向<br>–row 是默认值，是主轴从左到右的方向排列,开始位在最左侧<br>–column 是主轴从上到下的方向排列，开始位是最上方<br>–row-reverse 是主轴从右到左的方向排列,开始位在最右侧<br>–column-reverse 是主轴从下到上的方向排列，开始位是最下方</li>
+<li>flex-wrap:nowrap; 是否允许换行<br>–nowrap 是不允许换行，是默认值<br>–wrap 是允许换行</li>
+<li>align-self: flex-start; 设置在子盒子上，是表示当前元素在当前侧轴上所处的位置<br>–flex-start 排在开始位<br>–flex-end 排在结束位<br>–center 是居中显示</li>
+<li>order: 1; 设置在子元素上，表示子元素的顺序，按照从大到小的顺序排列，不写的话默认为1</li>
+<li>flex: 1; 设置在子元素上，表示子元素在父盒子中主轴方向上所占的比重</li>
+</ol>
+<h3 id="零碎知识点"><a href="#零碎知识点" class="headerlink" title="零碎知识点:"></a>零碎知识点:</h3><ol>
+<li>-webkit-user-select:none;设置某元素的文字不能被选中.</li>
+<li>实现自定义三角形<br>.box {<br>  height: 0;<br> width: 0;<br> border: 50px solid;<br> border-color: yellow transparent transparent transparent;<br> margin: 50px auto<br>}</li>
+<li>position:absolute;<br>top:0;<br>left:0;<br>right:0;<br>bottom:0;<br>相当于height:100%;width:100%;但是元素必须加绝对定位</li>
+<li>backface-visibility:hidden;后面隐藏</li>
+</ol>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/03/02/angular复习/" class="pre-post btn btn-default" title>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs"></span>
+        </a>
+    
+    
+        <a href="/2017/02/25/事件冒泡与捕获/" class="next-post btn btn-default" title="事件冒泡和捕获">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">事件冒泡和捕获</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何使用手册"><span class="toc-text">如何使用手册</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#学会使用工具，可以让我们事半功倍。"><span class="toc-text">学会使用工具，可以让我们事半功倍。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一、选择器"><span class="toc-text">一、选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、颜色"><span class="toc-text">二、颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、文字阴影"><span class="toc-text">三、文字阴影</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、边框"><span class="toc-text">四、边框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、盒模型"><span class="toc-text">五、盒模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、背景"><span class="toc-text">六、背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七、渐变"><span class="toc-text">七、渐变</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#渐变"><span class="toc-text">渐变</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八、过渡动画"><span class="toc-text">八、过渡动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九、2D转换"><span class="toc-text">九、2D转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十、3D转换"><span class="toc-text">十、3D转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十一、帧动画"><span class="toc-text">十一、帧动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十二、flex弹性盒子"><span class="toc-text">十二、flex弹性盒子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#零碎知识点"><span class="toc-text">零碎知识点:</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2016
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+</body>
+</html>
