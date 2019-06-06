@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html lang="null">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Silence">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="TypeScript">
+
+
+    <meta name="description" content="一、准备
+1. 安装npm install -g typescript
+2. vscode自动编译
+项目目录终端执行 tsc --init
+更改tsconfig.json “outDir”: “...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>TypeScript | Silence</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="Silence">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> Rain </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Silence</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="TypeScript">
+            
+	            TypeScript
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/TypeScript/">TypeScript</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2019/04/29</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h2><hr>
+<h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><p><code>npm install -g typescript</code></p>
+<h3 id="2-vscode自动编译"><a href="#2-vscode自动编译" class="headerlink" title="2. vscode自动编译"></a>2. vscode自动编译</h3><ul>
+<li>项目目录终端执行 <code>tsc --init</code></li>
+<li>更改tsconfig.json “outDir”: “./js”</li>
+</ul>
+<h2 id="二、基础语法"><a href="#二、基础语法" class="headerlink" title="二、基础语法"></a>二、基础语法</h2><hr>
+<h3 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1.数据类型"></a>1.数据类型</h3><ul>
+<li>布尔值</li>
+<li>数字</li>
+<li>字符串</li>
+<li>数组</li>
+<li>元组 Tuple</li>
+<li>枚举</li>
+<li>Any</li>
+<li>Void （函数没有返回值使用。）</li>
+<li>Null 和 Undefined （默认情况下null和undefined是所有类型的子类型。）</li>
+<li>Never （never类型是任何类型的子类型）</li>
+<li>Object</li>
+</ul>
+<h3 id="2-函数"><a href="#2-函数" class="headerlink" title="2.函数"></a>2.函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">声明函数</span><br><span class="line">function run():string &#123;</span><br><span class="line">    return &apos;typescript&apos;;</span><br><span class="line">&#125;</span><br><span class="line">匿名函数</span><br><span class="line">var fun = function():string &#123;</span><br><span class="line">    return &apos;typescript&apos;;</span><br><span class="line">&#125;</span><br><span class="line">定义方法传参</span><br><span class="line">function user(name:string,age:number):string &#123;</span><br><span class="line">    return `$&#123;name&#125;----$&#123;age&#125;`;</span><br><span class="line">&#125;</span><br><span class="line">var user = function(name:string,age:number):string &#123;</span><br><span class="line">    return `$&#123;name&#125;----$&#123;age&#125;`;</span><br><span class="line">&#125;</span><br><span class="line">没有返回值</span><br><span class="line">function run():void &#123;</span><br><span class="line">    console.log(&apos;typescript&apos;  );</span><br><span class="line">&#125;</span><br><span class="line">方法可选参数</span><br><span class="line">function user(name: string,age?:number):string &#123;</span><br><span class="line">    return `$&#123;name&#125;----$&#123;age&#125;`;</span><br><span class="line">&#125;</span><br><span class="line">方法参数默认值</span><br><span class="line">function user(name: string,age:number=20):string &#123;</span><br><span class="line">    return `$&#123;name&#125;----$&#123;age&#125;`;</span><br><span class="line">&#125;</span><br><span class="line">方法剩余参数</span><br><span class="line">function user(...result:number[]):string &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">function user(name: string,...result:number[]):string &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">重载</span><br><span class="line">function user(name: string):string;</span><br><span class="line">function user(age: number):number;</span><br><span class="line">function user(str:any):any &#123;</span><br><span class="line">    if(typeof str===&apos;string) &#123;</span><br><span class="line">        return str</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return str</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-类"><a href="#3-类" class="headerlink" title="3.类"></a>3.类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">基本模型</span><br><span class="line">class Person &#123;</span><br><span class="line">    name: string; //属性 省略publick 关键词</span><br><span class="line">    constructor(name:string) &#123;  //构造函数 实例化的时候调用的方法(初始化对象)</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    run():void &#123;</span><br><span class="line">        alert(this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Person &#123;</span><br><span class="line">    name: string; //属性 省略publick 关键词</span><br><span class="line">    constructor(name:string) &#123;  //构造函数 实例化的时候调用的方法(初始化对象)</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    setName():void &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    getName():string &#123;</span><br><span class="line">        alert(this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var person1 = new Person(&apos;张三&apos;);</span><br><span class="line">alert(person1.getName());</span><br><span class="line">person1.setName(&apos;李四&apos;)；</span><br><span class="line">alert(person1.getName());</span><br></pre></td></tr></table></figure>
+<h3 id="4-继承"><a href="#4-继承" class="headerlink" title="4.继承"></a>4.继承</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    name: string; //属性 省略publick 关键词</span><br><span class="line">    constructor(name:string) &#123;  //构造函数 实例化的时候调用的方法(初始化对象)</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    run():string &#123;</span><br><span class="line">        return `$&#123;this.name&#125;`</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">子类可以使用父类的属性和方法  如果子类的方法或者属性和父类相同  则以子类为主</span><br><span class="line">class Web extends Person &#123;</span><br><span class="line">    constructor(name:string) &#123;</span><br><span class="line">        super(name); //初始化父类的构造函数</span><br><span class="line">    &#125;</span><br><span class="line">    work():string &#123;</span><br><span class="line">        return `$&#123;this.name&#125;在运动`</span><br><span class="line">    &#125;</span><br><span class="line">    run():string &#123;</span><br><span class="line">        return `$&#123;this.name&#125;` </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var w = new Web(&apos;李四&apos;);</span><br><span class="line">alert(w.run());</span><br></pre></td></tr></table></figure>
+<h3 id="5-类里面的修饰符"><a href="#5-类里面的修饰符" class="headerlink" title="5.类里面的修饰符"></a>5.类里面的修饰符</h3><ul>
+<li>public</li>
+</ul>
+<blockquote>
+<p>共有类型 在类里面、子类、类外面都可以访问(默认，不写默认就是)。</p>
+</blockquote>
+<ul>
+<li>protected </li>
+</ul>
+<blockquote>
+<p>保护类型 在类里面、子类可以访问，类外面都不可以访问。</p>
+</blockquote>
+<ul>
+<li>private</li>
+</ul>
+<blockquote>
+<p>私有类型 在类里面可以访问，子类和类外面都不可以访问。</p>
+</blockquote>
+<h3 id="6-类的静态属性和静态方法"><a href="#6-类的静态属性和静态方法" class="headerlink" title="6.类的静态属性和静态方法"></a>6.类的静态属性和静态方法</h3><ul>
+<li>static （静态方法里面不能直接调用类里面的属性，能调用静态属性）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    public name:string;</span><br><span class="line">    static age:number=20;</span><br><span class="line">    constructor(name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    run() &#123;</span><br><span class="line">        alert(`$&#123;this.name&#125;在运动`);</span><br><span class="line">    &#125;</span><br><span class="line">    static print() &#123;</span><br><span class="line">        alert(`print`+Person.age); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7-多态"><a href="#7-多态" class="headerlink" title="7.多态"></a>7.多态</h3><ul>
+<li>父类定义一个方法不去实现，让继承它的子类去实现，让每一个子类有不同的表现</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Animal &#123;</span><br><span class="line">    name:string;</span><br><span class="line">    constructor(name:string)&#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    eat() &#123;</span><br><span class="line">        console.log(&apos;吃的方法&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Dog extends Animal &#123;</span><br><span class="line">    constructor(name:string) &#123;</span><br><span class="line">        super(name)</span><br><span class="line">    &#125;</span><br><span class="line">    eat() &#123;</span><br><span class="line">        return this.name + &apos;骨头&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Cat extends Animal &#123;</span><br><span class="line">    constructor(name:string) &#123;</span><br><span class="line">        super(name)</span><br><span class="line">    &#125;</span><br><span class="line">    eat() &#123;</span><br><span class="line">        return this.name + &apos;鱼&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-抽象类"><a href="#8-抽象类" class="headerlink" title="8.抽象类"></a>8.抽象类</h3><ul>
+<li>提供标准 </li>
+<li>abstract 抽象类不能实例化 为子类提供基类</li>
+<li>子类必须实现父类的抽象方法</li>
+<li>abstract必须放在抽象类里面</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">abstract class Animal &#123;</span><br><span class="line">    name:string;</span><br><span class="line">    constructor(name:string)&#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    abstract eat():any;</span><br><span class="line">&#125;</span><br><span class="line">class Dog extends Animal &#123;</span><br><span class="line">    constructor(name:any) &#123;</span><br><span class="line">        super(name);</span><br><span class="line">    &#125;</span><br><span class="line">    eat() &#123;</span><br><span class="line">        console.log(this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-接口"><a href="#8-接口" class="headerlink" title="8.接口"></a>8.接口</h3><ul>
+<li>定义规范 定义行为和动作的规范 （接口不关心类内部的数据状态和方法实现的细节）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line">interface FullName &#123;</span><br><span class="line">    firstName: string;</span><br><span class="line">    secondName: string;</span><br><span class="line">&#125;</span><br><span class="line">function printName(name: FullName) &#123;</span><br><span class="line">    console.log(name.firstName+ &apos;--&apos; +name.secondName)</span><br><span class="line">&#125;</span><br><span class="line">var obj = &#123;</span><br><span class="line">    firstName: &apos;sun&apos;,</span><br><span class="line">    secondName: &apos;yu&apos;</span><br><span class="line">&#125;</span><br><span class="line">printName(obj) // ok</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">接口的可选属性</span><br><span class="line">interface FullName &#123;</span><br><span class="line">    firstName: string;</span><br><span class="line">    secondName?: string;</span><br><span class="line">&#125;</span><br><span class="line">function printName(name: FullName) &#123;</span><br><span class="line">    console.log(name.firstName+ &apos;--&apos; +name.secondName)</span><br><span class="line">&#125;</span><br><span class="line">var obj = &#123;</span><br><span class="line">    firstName: &apos;sun&apos;,</span><br><span class="line">    secondName: &apos;yu&apos;</span><br><span class="line">&#125;</span><br><span class="line">printName(obj) // ok</span><br><span class="line">var obj = &#123;</span><br><span class="line">    firstName: &apos;sun&apos;</span><br><span class="line">&#125;</span><br><span class="line">printName(obj) // ok</span><br><span class="line"></span><br><span class="line">函数类型的接口</span><br><span class="line">interface encrypt &#123;</span><br><span class="line">    (key:string,value:string):string;</span><br><span class="line">&#125;</span><br><span class="line">var md5:encrypt = function(key:string,value:string):string &#123;</span><br><span class="line">    return key+value;</span><br><span class="line">&#125;</span><br><span class="line">md5(&apos;key&apos;,&apos;value&apos;);</span><br><span class="line"></span><br><span class="line">可索引接口 数组和对象的约束(不常用)</span><br><span class="line">interface userArr &#123;</span><br><span class="line">    [index:number]:string</span><br><span class="line">&#125;</span><br><span class="line">var arr:userArr = [&apos;string&apos;,&apos;string&apos;]; //ok</span><br><span class="line"></span><br><span class="line">interface userObj &#123;</span><br><span class="line">    [index:string]:string</span><br><span class="line">&#125;</span><br><span class="line">var arr:userObj = [&apos;string&apos;,&apos;string&apos;]; //ok</span><br><span class="line"></span><br><span class="line">类类型接口 对类的约束</span><br><span class="line">interface Animal &#123;</span><br><span class="line">    name:string;</span><br><span class="line">    eat(str:string):void;</span><br><span class="line">&#125;</span><br><span class="line">class Dog implements Animal &#123;</span><br><span class="line">    name: string;</span><br><span class="line">    constructor(name:string) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    eat() &#123;</span><br><span class="line">        return `吃骨头`;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var dog = new Dog(&apos;小黑&apos;);</span><br><span class="line">dog.eat();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">接口扩展  接口扩展接口</span><br><span class="line">interface Animal &#123;</span><br><span class="line">    eat():void;</span><br><span class="line">&#125;</span><br><span class="line">interface Person extends Animal &#123;</span><br><span class="line">    work():void;</span><br><span class="line">&#125;</span><br><span class="line">class Web implements Person &#123;</span><br><span class="line">    public name:string;</span><br><span class="line">    constructor(name:string)&#123;</span><br><span class="line">        this.name= name;</span><br><span class="line">    &#125;</span><br><span class="line">    eat() &#123;</span><br><span class="line">        console.log(this.name+&apos;喜欢吃馒头&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">    work() &#123;</span><br><span class="line">        console.log(this.name+&apos;爱工作&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">---------------------------</span><br><span class="line"></span><br><span class="line">interface Animal &#123;</span><br><span class="line">    eat():void;</span><br><span class="line">&#125;</span><br><span class="line">interface Person extends Animal &#123;</span><br><span class="line">    work():void;</span><br><span class="line">&#125;</span><br><span class="line">class programmer &#123;</span><br><span class="line">    public: name:string;</span><br><span class="line">    constructor(name:string) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    coding(code:string)&#123;</span><br><span class="line">        console.log(this.name+code);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Web extends programmer implements Person &#123;</span><br><span class="line">    constructor(name:string)&#123;</span><br><span class="line">        super(name)</span><br><span class="line">    &#125;</span><br><span class="line">    eat() &#123;</span><br><span class="line">        console.log(this.name+&apos;喜欢吃馒头&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">    work() &#123;</span><br><span class="line">        console.log(this.name+&apos;爱工作&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="9-泛型"><a href="#9-泛型" class="headerlink" title="9.泛型"></a>9.泛型</h3>
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2019/06/06/Mongodb/Mongodb/" class="pre-post btn btn-default" title="Mongodb">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Mongodb</span>
+        </a>
+    
+    
+        <a href="/2019/04/25/面向对象/面向对象第一天/" class="next-post btn btn-default" title="javascript 面向对象：1">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">javascript 面向对象：1</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、准备"><span class="toc-text">一、准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装"><span class="toc-text">1. 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-vscode自动编译"><span class="toc-text">2. vscode自动编译</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、基础语法"><span class="toc-text">二、基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-数据类型"><span class="toc-text">1.数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-函数"><span class="toc-text">2.函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-类"><span class="toc-text">3.类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-继承"><span class="toc-text">4.继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-类里面的修饰符"><span class="toc-text">5.类里面的修饰符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-类的静态属性和静态方法"><span class="toc-text">6.类的静态属性和静态方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-多态"><span class="toc-text">7.多态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-抽象类"><span class="toc-text">8.抽象类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-接口"><span class="toc-text">8.接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-泛型"><span class="toc-text">9.泛型</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2016
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+</body>
+</html>
