@@ -16,16 +16,13 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content="html">
+    <meta name="keywords" content="JavaScript">
 
 
-    <meta name="description" content="HTML5的表单
-HTML5的第二个大特点就是他的各种表单控件，也是非常强大的功能。
-输入类型
+    <meta name="description" content="一、概念
+栈：先进先出。队列尾部添加新元素，并从顶部移除元素。新添加的元素必须排在队列的末尾。
 
-
-输入类型，顾名思义就是我们在写input标签时type后面的属性值，我们以前接触的有
-&lt;...">
+123456789101112131415161718192021222324252627282...">
 
 
 
@@ -37,7 +34,7 @@ HTML5的第二个大特点就是他的各种表单控件，也是非常强大的
     <!--Title-->
 
 
-<title>html5表单 | Silence</title>
+<title>JavaScript队列(Queue) | Silence</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
@@ -138,16 +135,16 @@ HTML5的第二个大特点就是他的各种表单控件，也是非常强大的
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="html5表单">
+        <h1 id="JavaScript队列(Queue)">
             
-	            html5表单
+	            JavaScript队列(Queue)
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/前端/">前端</a>
+            <a class="category-link" href="/categories/数据结构/">数据结构</a>
         </span>
     
 
@@ -156,7 +153,7 @@ HTML5的第二个大特点就是他的各种表单控件，也是非常强大的
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
                 
-                    <a class="tag-link" href="/tags/html/">html</a>
+                    <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
                 
             </span>
         </span>
@@ -166,93 +163,20 @@ HTML5的第二个大特点就是他的各种表单控件，也是非常强大的
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2017/02/21</span>
+            <span class="date-meta">2019/06/14</span>
         </span>
         
     
 </div>
             
             
-            <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>842</strong>天之前发表，文中内容可能已经过时。
-            </p>
-        
     </div>
     
     <div class="post-body post-content">
-        <h2 id="HTML5的表单"><a href="#HTML5的表单" class="headerlink" title="HTML5的表单"></a>HTML5的表单</h2><ul>
-<li>HTML5的第二个大特点就是他的各种表单控件，也是非常强大的功能。</li>
-<li>输入类型</li>
+        <h3 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h3><ul>
+<li>栈：先进先出。队列尾部添加新元素，并从顶部移除元素。新添加的元素必须排在队列的末尾。</li>
 </ul>
-<ul>
-<li><p>输入类型，顾名思义就是我们在写input标签时type后面的属性值，我们以前接触的有</p>
-<pre><code>&lt;input type=&quot;text&quot;&gt;//-&gt; 文本框
-&lt;input type=&quot;password&quot;&gt;//-&gt; 密码框
-&lt;input type=&quot;checkbox&quot;&gt;//-&gt; 复选框
-&lt;input type=&quot;radio&quot;&gt;//-&gt; 单选框
-&lt;input type=&quot;submit&quot;&gt;//-&gt; 提交
-&lt;input type=&quot;button&quot;&gt;//-&gt; 按钮
-&lt;input type=&quot;reset&quot;&gt;//-&gt; 重置
-&lt;input type=&quot;file&quot;&gt;//-&gt; 文件选择
-</code></pre></li>
-<li><p>这些都是我们以前的输入类型，但是对于今天的开发，这些类型已经不够用了，我们需要更多更细致的分类</p>
-<pre><code>&lt;input type=&quot;email&quot;&gt;//-&gt; email地址匹配
-&lt;input type=&quot;url&quot;&gt;//-&gt; url地址匹配
-&lt;input type=&quot;tel&quot;&gt;//-&gt; 电话号码
-&lt;input type=&quot;number&quot;&gt;//-&gt; 数字
-&lt;input type=&quot;search&quot;&gt;//-&gt; 搜索框
-&lt;input type=&quot;color&quot;&gt;//-&gt; 拾色器
-&lt;input type=&quot;time&quot;&gt;//-&gt; 时间选择
-&lt;input type=&quot;date&quot;&gt;//-&gt; 日期选择
-&lt;input type=&quot;month&quot;&gt;//-&gt; 月份选择
-&lt;input type=&quot;week&quot;&gt;//-&gt; 周选择
-</code></pre></li>
-</ul>
-<ul>
-<li><p>这些新加入的输入类型，大大的降低了我们的代码量。比如，email框，以前我们要是想让这个框里输入的一定是email地址的话，我们需要用JS获取这个input框的value，然后写一段正则来匹配，最后在返回结果。而现在我们只需要在HTML中写个email类型的input框就可以了。</p>
-</li>
-<li><p>当然了，这里面有一些是针对移动设备的，并且有兼容性问题，所以我们在开发过程中一定要根据需求选择性的来使用。</p>
-<h2 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h2></li>
-<li><p>表单元素其实就是HTML5中新增加的一些属于表单的新标签。</p>
-</li>
-<li><p>以前我们接触的表单元素有</p>
-<pre><code>&lt;form&gt;&lt;/form&gt;//-&gt; 表单
-&lt;fieldset&gt;&lt;/fieldset&gt;//-&gt; 表单框
-&lt;legend&gt;&lt;/legend&gt;//-&gt; 表单框的标题
-&lt;label&gt;&lt;/label&gt;//-&gt; 表单里的控件标签
-&lt;textarea&gt;&lt;/textarea&gt;//-&gt; 文本区域
-&lt;select&gt;&lt;/select&gt;//-&gt; 选择列表
-&lt;option&gt;&lt;/option&gt;//-&gt; 选择列表的下拉项
-</code></pre></li>
-</ul>
-<h5 id="下面是我们HTML5中新增加的表单元素"><a href="#下面是我们HTML5中新增加的表单元素" class="headerlink" title="下面是我们HTML5中新增加的表单元素"></a>下面是我们HTML5中新增加的表单元素</h5><pre><code>&lt;datalist&gt;&lt;/datalist&gt;//-&gt; 数据列表
-&lt;output&gt;&lt;/output&gt;//-&gt; 输出结果
-&lt;meter&gt;&lt;/meter&gt;//-&gt; 度量器
-&lt;keygen&gt;&lt;/keygen&gt;//-&gt; 生成加密字符串
-</code></pre><ul>
-<li>这些都是为了我们的开发效率更快而诞生的，大家只需要记住就好。</li>
-</ul>
-<h4 id="表单属性"><a href="#表单属性" class="headerlink" title="表单属性"></a>表单属性</h4><ul>
-<li>表单属性就是对于一些表单元素的修饰，因为光靠现在的表单输入类型加上现有的表单元素，还是不能满足我们的各式各样的需求，所以就需要在依靠表单属性来帮我们做一些小细节的处理。</li>
-<li>比如：我们要一个文本框只能输入数字，以前只能靠一小段JS代码来实现，现在可以直接用“input type=”number””就可以了，但是如果我只想让他输入10到20之间的数字的时候，就必须要表单属性来帮助了。</li>
-</ul>
-<pre><code>&lt;input type=&quot;number&quot; min=&quot;10&quot; max=&quot;20&quot;&gt;
-</code></pre><ul>
-<li><p>这样的话就只能填写10到20之间的数字了。</p>
-</li>
-<li><p>以前我们还接触过很多表单属性，比如value等，我们就不意义列举了，直接介绍一下HTML5新增的属性</p>
-<pre><code>placeholder//-&gt; 占位符
-autofocus//-&gt; 自动获取焦点
-multiple//-&gt; 多文件上传
-autocomplete//-&gt; 自动填充
-form//-&gt; 表单关联
-novalidate//-&gt; 关闭验证
-required//-&gt; 必填
-pattern//-&gt; 自定义验证
-</code></pre></li>
-<li>通过这些表单属性，我们可以在HTML页面更加细致的处理一些表单的细节，而不需要借助JS。做到了节约性能。</li>
-</ul>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">class Queue &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    this.count = 0;</span><br><span class="line">    this.lowestCount = 0;</span><br><span class="line">    this.items = &#123;&#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  enqueue(element) &#123;</span><br><span class="line">    this.items[this.count] = element;</span><br><span class="line">    this.count++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  dequeue() &#123;</span><br><span class="line">    if (this.isEmpty()) &#123;</span><br><span class="line">      return undefined;</span><br><span class="line">    &#125;</span><br><span class="line">    const result = this.items[this.lowestCount];</span><br><span class="line">    delete this.items[this.lowestCount];</span><br><span class="line">    this.lowestCount++;</span><br><span class="line">    return result;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  peek() &#123;</span><br><span class="line">    if (this.isEmpty()) &#123;</span><br><span class="line">      return undefined;</span><br><span class="line">    &#125;</span><br><span class="line">    return this.items[this.lowestCount];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  isEmpty() &#123;</span><br><span class="line">    return this.size() === 0;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  clear() &#123;</span><br><span class="line">    this.items = &#123;&#125;;</span><br><span class="line">    this.count = 0;</span><br><span class="line">    this.lowestCount = 0;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  size() &#123;</span><br><span class="line">    return this.count - this.lowestCount;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  toString() &#123;</span><br><span class="line">    if (this.isEmpty()) &#123;</span><br><span class="line">      return &apos;&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    let objString = `$&#123;this.items[this.lowestCount]&#125;`;</span><br><span class="line">    for (let i = this.lowestCount + 1; i &lt; this.count; i++) &#123;</span><br><span class="line">      objString = `$&#123;objString&#125;,$&#123;this.items[i]&#125;`;</span><br><span class="line">    &#125;</span><br><span class="line">    return objString;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
     
     <div class="post-footer">
@@ -269,15 +193,15 @@ pattern//-&gt; 自定义验证
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2017/02/23/html5第一天/" class="pre-post btn btn-default" title="html5基础一">
+        <a href="/2019/06/14/DataStructure/JavaScript双端队列(Queue)/" class="pre-post btn btn-default" title="JavaScript双端队列(Queue)">
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">html5基础一</span>
+            <span class="hidden-xs">JavaScript双端队列(Queue)</span>
         </a>
     
     
-        <a href="/2017/02/21/html5标签兼容性/" class="next-post btn btn-default" title="html5兼容性">
+        <a href="/2019/06/14/DataStructure/JavaScript栈(Stack)/" class="next-post btn btn-default" title="JavaScript栈(Stack)">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">html5兼容性</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">JavaScript栈(Stack)</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -312,7 +236,7 @@ pattern//-&gt; 自定义验证
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5的表单"><span class="toc-text">HTML5的表单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表单元素"><span class="toc-text">表单元素</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#下面是我们HTML5中新增加的表单元素"><span class="toc-text">下面是我们HTML5中新增加的表单元素</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#表单属性"><span class="toc-text">表单属性</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、概念"><span class="toc-text">一、概念</span></a></li></ol>
         
     </div>
 </aside>
