@@ -16,10 +16,14 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content="JavaScript">
+    <meta name="keywords" content="JavaScript基础">
 
 
-    <meta name="description" content="个人微博">
+    <meta name="description" content="一、调用位置
+在理解 this 的绑定过程之前,首先要理解调用位置:调用位置就是函数在代码中被调用的位置(而不是声明的位置)。
+
+二、诀窍规则
+函数是否在new中调用(new绑定)?如果是的话t...">
 
 
 
@@ -31,7 +35,7 @@
     <!--Title-->
 
 
-<title>Chart.js | Silence</title>
+<title>重拾JavaScript(this) | Silence</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Silence" type="application/atom+xml">
@@ -132,16 +136,16 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Chart.js">
+        <h1 id="重拾JavaScript(this)">
             
-	            Chart.js
+	            重拾JavaScript(this)
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/Chart-js/">Chart.js</a>
+            <a class="category-link" href="/categories/JavaScript/">JavaScript</a>
         </span>
     
 
@@ -150,7 +154,7 @@
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
                 
-                    <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
+                    <a class="tag-link" href="/tags/JavaScript基础/">JavaScript基础</a>
                 
             </span>
         </span>
@@ -160,7 +164,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2019/07/03</span>
+            <span class="date-meta">2019/08/22</span>
         </span>
         
     
@@ -170,7 +174,16 @@
     </div>
     
     <div class="post-body post-content">
-        
+        <h3 id="一、调用位置"><a href="#一、调用位置" class="headerlink" title="一、调用位置"></a>一、调用位置</h3><ul>
+<li>在理解 this 的绑定过程之前,首先要理解调用位置:调用位置就是函数在代码中被调用的位置(而不是声明的位置)。</li>
+</ul>
+<h3 id="二、诀窍规则"><a href="#二、诀窍规则" class="headerlink" title="二、诀窍规则"></a>二、诀窍规则</h3><ol>
+<li>函数是否在new中调用(new绑定)?如果是的话this绑定的是新创建的对象。<br> var bar = new foo()</li>
+<li>函数是否通过call、apply(显式绑定)或者硬绑定调用?如果是的话,this绑定的是 指定的对象。<br> var bar = foo.call(obj2)</li>
+<li>函数是否在某个上下文对象中调用(隐式绑定)?如果是的话,this绑定的是那个上 下文对象。<br> var bar = obj1.foo()</li>
+<li>如果都不是的话,使用默认绑定。如果在严格模式下,就绑定到undefined,否则绑定到 全局对象。<br> var bar = foo()</li>
+</ol>
+
     </div>
     
     <div class="post-footer">
@@ -188,9 +201,9 @@
 <div class="article-nav prev-next-wrap clearfix">
     
     
-        <a href="/2019/06/27/React/React-router-dom/" class="next-post btn btn-default" title="React-router-dom">
+        <a href="/2019/08/22/JavaScript/对象/" class="next-post btn btn-default" title="重拾JavaScript(Object对象)">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">React-router-dom</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">重拾JavaScript(Object对象)</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -225,7 +238,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、调用位置"><span class="toc-text">一、调用位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、诀窍规则"><span class="toc-text">二、诀窍规则</span></a></li></ol>
         
     </div>
 </aside>
